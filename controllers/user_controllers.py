@@ -5,3 +5,6 @@ class UserController:
     @staticmethod
     def index():
         return render_template('index.html')
+    
+    def contact():
+        return render_template('contact.html')

@@ -16,8 +16,8 @@ with app.app_context():
     db.create_all()
 
 
-
 app.add_url_rule('/', 'index', UserController.index)
+app.add_url_rule('/contact','contact', UserController.contact, methods=['POST','GET'])
 
 
 if __name__ == '__main__':
