@@ -16,6 +16,9 @@ class UserController:
             senha = request.form['senha']
             tipo = request.form['useradmin']
 
+            if not nome or not email or not senha or not tipo:
+                return render_template('contact.html', error='por favor preencha todos os campos')
+
             new_user = User(nome=nome, email=email, senha=senha, tipo=tipo)
             db.session.add(new_user)
             db.session.commit()
