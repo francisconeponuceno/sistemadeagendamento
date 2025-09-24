@@ -78,7 +78,7 @@ class Agendamento(db.Model):
     status = db.Column(db.String(20), default='pendente')
 
     # RELACIONAMENTOS REVERSOS
-    cliente = db.relationship('cliente', back_populates='agendamentos')
+    cliente = db.relationship('Cliente', back_populates='agendamentos')
     profissional = db.relationship('Profissional', back_populates='agendamentos')
     serviso = db.relationship('Servico', back_populates='agendamentos')
     
