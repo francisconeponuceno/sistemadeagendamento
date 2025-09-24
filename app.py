@@ -2,7 +2,8 @@ from flask import Flask
 import os
 from config import Config
 from controllers.user_controllers import UserController
-from models.user import db
+from models.user import db, migrate
+
 
 
 app = Flask(__name__, template_folder=os.path.join('views', 'templates' ))
@@ -10,10 +11,8 @@ app.config.from_object(Config)
 
 # inicializa o banco de dados
 db.init_app(app)
+migrate.init_app(app, db)
 
-# Criar as tabelas
-with app.app_context():
-    db.create_all()
 
 
 app.add_url_rule('/', 'index', UserController.index)
