@@ -15,7 +15,7 @@ class User(db.Model):
     senha = db.Column(db.String(100), nullable=False, unique=True)
     tipo = db.Column(db.String(20), nullable=False)
     data_criacao = db.Column(db.Date, default=date.today)
-    hora_cadastro = db.Column(db.Time, default=datetime.now)
+    hora_cadastro = db.Column(db.DateTime, default=datetime.now)
 
 
 #------------------
