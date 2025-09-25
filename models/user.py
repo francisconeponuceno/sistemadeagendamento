@@ -87,6 +87,7 @@ class Agendamento(db.Model):
     profissional = db.relationship('Profissional', back_populates='agendamentos')
     serviso = db.relationship('Servico', back_populates='agendamentos')
     
+    
 =======
     data = db.Column(db.Date, default=datetime.now())
 >>>>>>> 07867d5fcbdff32b8a4c14b56bd03bad29bc12ea
