@@ -1,14 +1,16 @@
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 from datetime import datetime, date
 from flask_migrate import Migrate
 
+<<<<<<< HEAD
 
 migrate = Migrate()
+=======
+>>>>>>> 07867d5fcbdff32b8a4c14b56bd03bad29bc12ea
 db = SQLAlchemy()
+migrate = Migrate()
 
-#------------------
-# TABLELA USUÁRIO
-#------------------
 class User(db.Model):
     __tablename__ = "usuarios"
 
@@ -17,6 +19,7 @@ class User(db.Model):
     email = db.Column(db.String(100), nullable=False, unique=True)
     senha = db.Column(db.String(100), nullable=False, unique=True)
     tipo = db.Column(db.String(20), nullable=False)
+<<<<<<< HEAD
     data_criacao = db.Column(db.Date, default=date.today)
     hora_cadastro = db.Column(db.Time, default=datetime.now)
 
@@ -84,3 +87,6 @@ class Agendamento(db.Model):
     profissional = db.relationship('Profissional', back_populates='agendamentos')
     serviso = db.relationship('Servico', back_populates='agendamentos')
     
+=======
+    data = db.Column(db.Date, default=datetime.now())
+>>>>>>> 07867d5fcbdff32b8a4c14b56bd03bad29bc12ea
