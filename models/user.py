@@ -1,7 +1,9 @@
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime, date
+from flask_migrate import Migrate
 
 
+migrate = Migrate()
 db = SQLAlchemy()
 
 #------------------
@@ -29,7 +31,7 @@ class Cliente(db.Model):
     nome = db.Column(db.String(100), nullable=False)
 
     # relacionamento: um cliente pode ter vários agendamentos
-    agendamentos = db.relationship("Agendamento", back_populates="cliente")
+    agendamentos = db.relationship("agendamentos", back_populates="cliente")
 
 
 #--------------------
@@ -70,7 +72,7 @@ class Agendamento(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     cliente_id = db.Column(db.Integer, db.Foreignkey('clientes.id'),nullable=False)
-    profissional_id = db.Column(db.Integer, db.ForeignKey('profissionais.id',nullable=False))
+    profissional_id = db.Column(db.Integer, db.ForeignKey('profissionais.id'),nullable=False)
     servico_id = db.Column(db.Integer, db.ForeignKey('servicos.id'), nullable=False)
 
     data = db.Column(db.date, nullable=False)
@@ -78,7 +80,7 @@ class Agendamento(db.Model):
     status = db.Column(db.String(20), default='pendente')
 
     # RELACIONAMENTOS REVERSOS
-    cliente = db.relationship('Cliente', back_populates='agendamentos')
+    cliente = db.relationship('clientes', back_populates='agendamentos')
     profissional = db.relationship('Profissional', back_populates='agendamentos')
     serviso = db.relationship('Servico', back_populates='agendamentos')
     
