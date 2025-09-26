@@ -13,13 +13,14 @@ class UserController:
         if request.method == 'POST':
             nome = request.form['nome']
             email = request.form['email']
+            fone = request.form['fone']
             senha = request.form['senha']
             tipo = request.form['useradmin']
 
             if not nome or not email or not senha or not tipo:
                 return render_template('contact.html', error='por favor preencha todos os campos')
 
-            new_user = User(nome=nome, email=email, senha=senha, tipo=tipo)
+            new_user = User(nome=nome, email=email, telefone=fone, senha=senha, tipo=tipo)
             db.session.add(new_user)
             db.session.commit()
 
