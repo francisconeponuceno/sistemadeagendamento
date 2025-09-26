@@ -9,7 +9,7 @@
     <h1>Lista de Usuários</h1>
     <ul>
         {% for user in users %}
-        <li>{{ user.nome }} - {{ user.email }} - {{ user.tipo }}</li>
+        <li>{{ user.nome }} - {{ user.email }} - {{ user.tipo }} - {{ user.telefone }} - {{ user.hora_cadastro }}</li>
         {% endfor %}
     </ul>
 
