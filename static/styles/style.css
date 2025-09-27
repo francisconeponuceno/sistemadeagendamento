@@ -10,13 +10,18 @@
 }
 
 * {
+<<<<<<< HEAD
     margin: 0;
+=======
+    border: 0;
+>>>>>>> 3bdd3850f3779b177961fa8bdc62066ee1c0231f
     padding: 0;
     box-sizing: border-box;
     background-color: var(--cor1);
     font-family: "Poppins", sans-serif;
     
 }
+<<<<<<< HEAD
 
 header {
     background-color: var(--cor3);
@@ -81,3 +86,5 @@ header span {
     border-radius: 10px;
     margin-left: 15px;
 }
+=======
+>>>>>>> 3bdd3850f3779b177961fa8bdc62066ee1c0231f
