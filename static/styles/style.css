@@ -10,10 +10,74 @@
 }
 
 * {
-    border: 0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: var(--cor1);
     font-family: "Poppins", sans-serif;
     
+}
+
+header {
+    background-color: var(--cor3);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 60px;
+
+}
+
+header h1 {
+    background: none;
+    color: var(--cor2);
+}
+
+header span {
+    background: none;
+    color: var(--cor5);
+}
+
+.cabecalho {
+    width: 40%;
+    
+}
+
+.cabecalho ul, li {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--cor3);
+    font-size: 1.2rem;
+    color: var(--cor2);
+}
+
+.cabecalho ul, li:hover {
+    color: var(--cor5);
+    
+}
+
+.user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    background: none;
+    gap: 5px;
+}
+
+.user p, i {
+    background: none;
+    font-size: 1.2rem;
+    color: var(--cor2);
+}
+
+.user button {
+    background-color: var(--cor5);
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 15px;
 }
