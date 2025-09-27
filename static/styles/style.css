@@ -13,71 +13,180 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--cor1);
     font-family: "Poppins", sans-serif;
-    
 }
 
+body {
+    background-color: var(--cor1);
+}
+
+
+/* ESTILO DE BOTOES */
+.botao {
+    width: 200px;
+    padding: 10px 20px;
+    background-color: var(--cor5);
+    border-radius: 10px;
+    border: 0;
+    color: var(--cor1);
+    font-weight: bolder;
+    transition: calc(1s);
+}
+
+.botao:hover {
+    background: none;
+    border:  1px solid var(--cor5);
+}
+
+/* FIM DO ESTILO DE BOTOES */
+
+/* INICIO ESTILO HEADER */
 header {
     background-color: var(--cor3);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 60px;
-
+    padding: 0 25px 0 25px;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-header h1 {
-    background: none;
-    color: var(--cor2);
-}
-
-header span {
-    background: none;
-    color: var(--cor5);
-}
-
-.cabecalho {
-    width: 40%;
-    
-}
-
-.cabecalho ul, li {
+.logo{
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: var(--cor3);
-    font-size: 1.2rem;
-    color: var(--cor2);
-}
-
-.cabecalho ul, li:hover {
-    color: var(--cor5);
-    
-}
-
-.user {
-    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 20%;
-    background: none;
-    gap: 5px;
+    gap: 10px;
 }
 
-.user p, i {
-    background: none;
-    font-size: 1.2rem;
+.logo img {
+    width: 40px;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
     color: var(--cor2);
 }
 
-.user button {
-    background-color: var(--cor5);
-    padding: 8px;
-    border: none;
-    border-radius: 10px;
-    margin-left: 15px;
+.logo span {
+    color: var(--cor5);
 }
+
+.menu {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu a {
+    color: var(--cor2);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: var(--cor5);
+    background-color: var(--cor2);
+    padding: 3px 15px;
+    border-radius: 15px;
+    transition: calc(0.8s);
+}
+
+.login {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+   
+}
+
+.login i, a {
+    color: var(--cor2);
+    font-size: 1.3rem;
+    align-items: center;
+    text-decoration: none;
+}
+
+.login a:hover {
+    color: var(--cor5);
+    text-decoration: underline;
+}
+
+.menuBuger {
+    display: none;
+}
+
+
+/* FIM DO ESTILO HEADER*/ 
+
+/* INICIO ESTILO BANNER*/
+.banner{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #9B7C64;
+    background: url('/static/imagens/img-banner/fundo.png') no-repeat;
+ 
+}
+
+.banner .destaque {
+    width: 60%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   
+}
+
+.banner .destaque h1 {
+    font-size: 3rem;
+    color: var(--cor1);
+}
+
+.banner .destaque span {
+    color: var(--cor5);
+}
+
+.banner .destaque p {
+    color: var(--cor1);
+    font-size: 1.5rem;
+}
+
+.banner .agendar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.banner .agendar .btn-sevico {
+    width: 200px;
+    padding: 10px 20px;
+    background: none;
+    border-radius: 10px;
+    border:  1px solid var(--cor5);
+    color: var(--cor1);
+    font-weight: bolder;
+    transition: calc(1s);
+}
+
+.banner .agendar .btn-sevico:hover {
+    background-color: var(--cor5);
+}
+
+/* FIM ESTILO BANNER*/
+
+
+
