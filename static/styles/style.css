@@ -35,6 +35,7 @@ body {
 
 .botao:hover {
     background: none;
+    color: var(--cor5);
     border:  1px solid var(--cor5);
 }
 
@@ -196,10 +197,11 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #F1D7B4;
+    margin-top: 15px;
+    color: var(--cor2);
 }
 
-.servico, .titulo {
+.servico .titulo {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -207,18 +209,72 @@ header {
     justify-content: center;
 }
 
-.servico, .titulo h1 {
+.servico .titulo h1 {
     font-size: 2.8rem;
     font-weight: bold;
+    color: var(--cor2);
 }
 
-.servico, .titulo span {
+.servico .titulo span {
     color: var(--cor5);
 }
 
-.servico, .titulo p {
+.servico .titulo p {
     font-size: 1.1rem;
 }
+
+.servico .cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    padding: 10px;
+    gap: 20px;
+    
+}
+
+.servico .card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    height: 400px;
+    padding: 10px;
+    box-shadow: 2px 5px 5px rgba(0,0,0,0.5);
+    color: var(--cor2);
+}
+
+.servico .card i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor5);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    color: var(--cor1);
+}
+
+.servico .card h3 {
+    color: var(--cor2);
+    font-size: 1.2rem;
+}
+
+.servico .card p {
+    font-size: 0.9rem;
+}
+
+.servico .card li::marker {
+    color: var(--cor5);
+}
+
+.servico .card li span {
+    color: var(--cor2);
+    font-weight: bold;
+}
+
 
 /* FIM DO ESTILO SERVIÇOS */
 
