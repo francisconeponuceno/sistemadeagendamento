@@ -188,5 +188,38 @@ header {
 
 /* FIM ESTILO BANNER*/
 
+/* INICIO DO ESTILO SERVIÇOS */
+
+.servico {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F1D7B4;
+}
+
+.servico, .titulo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.servico, .titulo h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.servico, .titulo span {
+    color: var(--cor5);
+}
+
+.servico, .titulo p {
+    font-size: 1.1rem;
+}
+
+/* FIM DO ESTILO SERVIÇOS */
 
 
