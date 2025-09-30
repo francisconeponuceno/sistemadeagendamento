@@ -255,6 +255,7 @@ header {
     height: 40px;
     border-radius: 10px;
     color: var(--cor1);
+    margin-bottom: 10px;
 }
 
 .servico .card h3 {
@@ -275,7 +276,88 @@ header {
     font-weight: bold;
 }
 
-
 /* FIM DO ESTILO SERVIÇOS */
 
+/* INICIO DO ESTILO SOBRE NOS */
+
+.sobre-nos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.sobre-nos h1 {
+    font-size: 2.8rem;
+    color: var(--cor2);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sobre-nos span {
+    color: var(--cor5);
+}
+
+.sobre-nos .sobre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.sobre-nos .sobre img {
+    width: 500px;
+    height: 500px;
+}
+
+.sobre-nos .sobre .historia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sobre-nos .sobre .historia p {
+    font-size: 1.3rem;
+    color: var(--cor2);
+}
+
+/* FIM DO ESTILO SOBRE NOS */
+
+/* INICIO DO ESTILO RODAPÉ */
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    background-color: #563A22;
+    padding: 10px;
+    color: var(--cor1);
+}
+
+
+footer .geral {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+footer .geral a {
+    color: var(--cor1);
+    font-size: 2rem;
+}
+
+footer .direitos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+
+
+/* INICIO DO ESTILO RODAPÉ */
 
