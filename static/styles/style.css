@@ -100,6 +100,46 @@ header {
     transition: calc(0.8s);
 }
 
+/* ESTILO MENU MOBYLI */
+
+.menu-mobily {
+    background-color: #FEFBF5;
+    width: 100%;
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.menu-mobily a {
+    background-color: #F18836;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    width: 100%;
+    color: #563A22;
+    font-weight: bold;
+}
+
+.open {
+    display: block;
+}
+
+.menuBuger {
+    display: none;
+    cursor: pointer;
+}
+
+
+/* FIM DO ESTILO MOBYLI */
+
 .login {
     width: 15%;
     display: flex;
@@ -119,10 +159,6 @@ header {
 .login a:hover {
     color: var(--cor5);
     text-decoration: underline;
-}
-
-.menuBuger {
-    display: none;
 }
 
 
@@ -404,9 +440,121 @@ footer .direitos {
         height: 250px;
     }
 
+    .sobre-nos  h1 {
+        font-size: 2rem;
+    }
+
+
     .sobre-nos .sobre .historia p {
         font-size: 0.7rem;
     }
+
+    .geral .rodape h3 {
+        font-size: 1rem;
+    }
+
+    .geral .rodape a {
+        font-size: 1rem;
+    }
+
+    .geral p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 675px) {
+
+    .logo img {
+        width: 30px;
+    }
+
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+
+    .login {
+        padding-right: 15px;
+    }
+
+    .login a {
+        font-size: 1rem;
+    }
+
+    .banner .destaque h1 {
+        font-size: 1.8rem;
+    }
+
+    .banner .destaque p {
+        font-size: 1rem;
+    }
+
+    .agendar {
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    .servico .titulo h1 {
+        font-size: 1.8rem;
+    }
+
+    .servico .titulo p {
+        font-size: 1rem;
+        padding: 5px;
+
+    }
+
+    .sobre-nos h1 {
+        font-size: 1.8rem;
+    }
+
+    .sobre-nos .sobre .imagem {
+        width: 100%;
+        margin-bottom: 2px;
+    }
+
+    .sobre-nos .sobre .imagem img {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+
+    .sobre-nos .historia {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+    }
+
+    .sobre-nos  .sobre .historia p {
+        font-size: 0.8rem;
+        padding: 10px;
+        margin-bottom: 0px;
+    }
+
+    .geral {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .geral .rodape {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .geral .rodape h3 {
+        font-size: 1.3rem;
+    }
+
+
+    
 }
 
 /* INICIO MIDIA QUERY */
