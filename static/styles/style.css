@@ -103,29 +103,31 @@ header {
 /* ESTILO MENU MOBYLI */
 
 .menu-mobily {
-    background-color: #FEFBF5;
     width: 100%;
+    margin-top: 30px;
     display: none;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 25px;
     padding: 5px;
+    border: 1px solid var(--cor1);
     border-radius: 10px;
 }
 
-.menu-mobily a {
-    background-color: #F18836;
+
+.sub-menu-link {
+    width: 30%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2px;
-    margin-bottom: 5px;
-    border-radius: 10px;
-    width: 100%;
-    color: #563A22;
-    font-weight: bold;
+    flex-wrap: wrap;
+    margin: auto;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.sub-menu-link a {
+    color: var(--cor1);
+    font-size: 1rem;
+}
+
+.sub-menu-link a:hover {
+    color: var(--cor5);
 }
 
 .open {
@@ -422,7 +424,7 @@ footer .direitos {
 
 @media (max-width: 767px) {
 
-    .menu {
+    .menu, .login-icone {
         display: none;
     }
 
@@ -481,7 +483,7 @@ footer .direitos {
     }
 
     .banner .destaque h1 {
-        font-size: 1.8rem;
+        font-size: 1.2rem;
     }
 
     .banner .destaque p {
