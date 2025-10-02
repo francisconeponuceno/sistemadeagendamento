@@ -14,7 +14,7 @@ migrate.init_app(app, db)
 
 
 app.add_url_rule('/', 'index', UserController.index)
-app.add_url_rule('/contact','contact', UserController.contact, methods=['POST','GET'])
+app.add_url_rule('/login','login', UserController.login, methods=['POST','GET'])
 
 
 if __name__ == '__main__':

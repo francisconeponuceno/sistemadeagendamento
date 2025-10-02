@@ -9,7 +9,7 @@ class UserController:
         return render_template('index.html', users=users)
     
     @staticmethod
-    def contact():
+    def login():
         if request.method == 'POST':
             nome = request.form['nome']
             email = request.form['email']
@@ -18,7 +18,7 @@ class UserController:
             tipo = request.form['useradmin']
 
             if not nome or not email or not senha or not tipo:
-                return render_template('contact.html', error='por favor preencha todos os campos')
+                return render_template('login.html', error='por favor preencha todos os campos')
 
             new_user = User(nome=nome, email=email, telefone=fone, senha=senha, tipo=tipo)
             db.session.add(new_user)
@@ -26,4 +26,4 @@ class UserController:
 
             return redirect(url_for('index'))
 
-        return render_template('contact.html')
+        return render_template('login.html')
