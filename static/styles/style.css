@@ -104,21 +104,26 @@ header {
 
 .menu-mobily {
     width: 100%;
-    margin-top: 30px;
-    display: none;
+    display: flex;
+    position: absolute;
+    top: 65px;
+    left: -100%;
+    transition: .7s ease-in-out;
     padding: 5px;
-    border: 1px solid var(--cor1);
-    border-radius: 10px;
+    background-color: var(--cor4);
 }
 
+.menu-active {
+    left: 0;
+}
 
 .sub-menu-link {
-    width: 30%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
     flex-direction: column;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
 }
 
 .sub-menu-link a {
@@ -127,12 +132,19 @@ header {
 }
 
 .sub-menu-link a:hover {
-    color: var(--cor5);
+    color: var(--cor2);
 }
 
-.open {
-    display: block;
+.sub-menu-link .entrar {
+    background-color: var(--cor5);
+    padding: 5px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    text-align: center;
 }
+
 
 .menuBuger {
     display: none;
@@ -423,6 +435,10 @@ footer .direitos {
 /* INICIO MIDIA QUERY */
 
 @media (max-width: 767px) {
+
+    .banner .destaque h1 {
+        font-size: 1.8rem;
+    }
 
     .menu, .login-icone {
         display: none;
