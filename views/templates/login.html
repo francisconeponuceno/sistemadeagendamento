@@ -9,7 +9,7 @@
     <title>User</title>
 </head>
 <body>
-    <section class="container">
+    <div class="container">
         <div class="principal">
             <div class="voltar-site">
                 <i class="fa-solid fa-rotate-left"></i>
@@ -23,30 +23,36 @@
                 </div>
                 <div class="formulario">
                     <form method="post">
-                        <div class="user-admin">
-                            <input type="radio" id="usuário" name="useradmin" value="usuario" required>
-                            <label for="">usuário</label>
-                            <input type="radio" id="admin" name="useradmin" value="administrador" required>
-                            <label for="">administrador</label>
+                        <div class="user">
+                            <div class="user-admin">
+                                <input type="radio" id="usuário" name="useradmin" value="usuario" required>
+                                <label for="">Cliente</label>
+                            </div>
+                            <div class="user-admin">
+                                <input type="radio" id="admin" name="useradmin" value="administrador" required>
+                                <label for="">Admin</label>
+                            </div>
+                            <div class="inputs">
+                                <input type="email" id="email" name="email" placeholder="email" required>
+                                <input type="password" id="senha" name="senha" placeholder="senha" required>
+                                <button type="submit">Entrar</button>
+                            </div>
                         </div>
-                        <input type="email" id="email" name="email" placeholder="email" required>
-                        <input type="password" id="senha" name="senha" placeholder="senha" required>
-                        <button type="submit">Entrar</button>
                     </form>
                 </div>
                 <div class="esquecer">
                     <form method="post">
-                        <p>Ainda nao tem Conta:</p>
+                        <label>Ainda nao tem Conta:</label>
                         <button type="submit">Criar</button>
                     </form>
                     <form method="post">
-                        <p>Esqueceu Senha:</p>
+                        <label>Esqueceu a Senha:</label>
                         <button type="submit">Recuperar</button>
                     </form>
                 </div> 
             </div>
         </div>
-    </section>
+    </div>
 
     
 </body>

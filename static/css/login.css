@@ -4,7 +4,7 @@
     --cor1: #FEFBF5; /* Fundo / Neutro claro (background principal) */
     --cor2: #563A22; /* Primária (títulos, menus, elementos fortes) */
     --cor3: #F1D7B4; /* Secundária (destaques suaves, cards, caixas de apoio) */
-    --cor4: #9B7C64; /* Apoio (texto secundário, bordas, sombras sutis) */
+    --cor4: #9b7c64; /* Apoio (texto secundário, bordas, sombras sutis) */
     --cor5: #F18836; /* Cor de Destaque (botões, links, chamadas de ação) */
     
 }
@@ -21,19 +21,176 @@ body {
 }
 
 .container {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background-color: #9B7C64;
+
 }
 
 .container .principal {
+    width: 400px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.container .principal .voltar-site {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.container .principal .voltar-site a {
+    text-decoration: none;
+    color: var(--cor4);
+    font-size: 1rem;
+}
+
+.container .principal .voltar-site i {
+    font-size: 1rem;
+    color: var(--cor4);
+}
+
+.container .principal .voltar-site a:hover {
+    color: var(--cor2);
+    text-decoration: underline;
+}
+
+.container .principal .login{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 .5rem 1rem rgb(155, 124, 100, 0.3);
+}
+
+.container .principal .login .name {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #F1D7B4;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.container .principal .login .name i {
+    font-size: 4rem;
+    color: var(--cor5);
+}
+
+.container .principal .login .name h1 {
+    font-size: 1.8rem;
+    color: var(--cor2);
+}
+
+.container .principal .login .name p {
+    font-size: 0.9rem;
+    color: var(--cor4);
+}
+
+.container .principal .login .formulario {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container .principal .login form {
+    width: 100%;
+}
+
+.container .principal .login .formulario .user {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.container .principal .login .formulario .user-admin {
+    display: flex;
+    gap: 5px;
+}
+
+.container .principal .login .formulario .user-admin label {
+    color: var(--cor4);
+    font-size: 0.9rem;
+}
+
+.container .principal .login .formulario .inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .principal .login .formulario input {
+    margin-bottom: 5px;
+    padding: 3px;
+    border: 1px solid var(--cor3);
+    border-radius: 5px;
+    outline: none;
+}
+
+.container .principal .login .formulario button {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--cor5);
+    padding: 5px;
+    color: var(--cor1);
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: calc(1.1s);
+}
+
+.container .principal .login .formulario button:hover {
+    background-color: var(--cor3);
+    color: var(--cor2);
+}
+
+.container .principal .login .esquecer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.container .principal .login .esquecer form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 2px;
+}
+
+.container .principal .login .esquecer form button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    font-size: 0.8rem;
+    color: var(--cor2);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.container .principal .login .esquecer form button:hover {
+    color: var(--cor5);
+    text-decoration: underline;
+}
+
+.container .principal .login .esquecer form label {
+    font-size: 0.8rem;
+    color: var(--cor4);
 }
