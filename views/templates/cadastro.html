@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/static/css/login.css">
-    <title>User</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/cadastro.css">
+    <title>cadastro</title>
 </head>
+
 <body>
     <div class="container">
         <div class="principal">
@@ -17,12 +22,13 @@
                     <button type="submit">Voltar ao site</button>
                 </form>
             </div>
-            <div class="login">
+            
+            <div class="cadastro">
                 <div class="name">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <h1>Login Cliente</h1>
-                    <p>Acesse sua conta pra gerenciar agendamentos</p>
+                    <i class="fa-solid fa-address-card"></i>
+                    <h1>Cadastro</h1>
                 </div>
+                
                 <div class="formulario">
                     <form method="post">
                         <div class="user">
@@ -35,28 +41,25 @@
                                 <label for="">Admin</label>
                             </div>
                             <div class="inputs">
+                                <input id="nome" name="nome" placeholder="nome" required>
                                 <input type="email" id="email" name="email" placeholder="email" required>
+                                <input type="tel" id="fone" name="fone" placeholder="telefone" required>
                                 <input type="password" id="senha" name="senha" placeholder="senha" required>
-                                <button type="submit">Entrar</button>
+                                <input type="password" id="repete_senha" name="repete_senha" placeholder="repete senha" required>
+                                <label style="color: red;">as senhas devem ser iguais</label>
+                                <button type="submit">Cadastrar</button>
+                                <label for="" style="color: green;"><i class="fa-solid fa-check"></i> Cadastro realizado com sucesso</label>
+                                
+
                             </div>
-                            <label style="color: red;"></label>
                         </div>
                     </form>
                 </div>
-                <div class="esquecer">
-                    <form method="post">
-                        <label>Ainda nao tem Conta:</label>
-                        <button type="submit">Criar</button>
-                    </form>
-                    <form method="post">
-                        <label>Esqueceu a Senha:</label>
-                        <button type="submit">Recuperar</button>
-                    </form>
-                </div> 
             </div>
         </div>
     </div>
 
-    
+
 </body>
+
 </html>
