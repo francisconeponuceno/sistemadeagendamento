@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/cliente.css">
+    <title>Cliente</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/static/imagens/img-header/logo.png" alt="">
+            <h1>Barber<span>Shop</span></h1>
+        </div>
+        <div class="menu">
+            <div class="cliente">
+                <span>Área do Cliente</span>
+            </div>
+            <div class="user">
+                <div class="login">
+                    <i class="fa-solid fa-user login-icone"></i>
+                    <span>Marina Silvia</span>
+                </div>
+                <div class="login">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Sair</span>
+                    <i class="fa-solid fa-bars menuBuger" id="menu-mobili" onclick="menuShow()"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="menu-mobily">
+        <div class="sub-menu-link">
+            <div class="login-mobili">
+                <i class="fa-solid fa-user login-icone"></i>
+                <span>Marina Silvia</span>
+            </div>
+            <div class="login-mobili">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sair</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="reservas">
+        <div class="sidbar">
+            <div class="sidbar-item">
+                <i class="fa-solid fa-calendar"></i>
+                <span>Minhas Reservas</span>
+            </div>
+            <div class="sidbar-item">
+                <i class="fa-solid fa-plus"></i>
+                <span>Novo Agendamento</span>
+            </div>
+            <div class="sidbar-item">
+                <i class="fa-solid fa-user login-icone"></i>
+                <span>Meu Perfil</span>
+            </div>
+        </div>
+        <div class="minhas-reservas">
+            <div class="title">
+                <h1>Minhas Reservas</h1>
+            </div>
+            <div class="card-servico">
+                <div class="servico">
+                    <div>
+                        <i class="fa-solid fa-scissors"></i>
+                    </div>
+                    <div>
+                        <h2>Corte Mascolino</h2>
+                        <span>Com João</span>
+                        <div class="data-hora">
+                            <i class="fa-solid fa-calendar"></i>
+                            <span>06/10/2025</span>
+                        </div>
+                        <div class="data-hora">
+                            <i class="fa-solid fa-clock"></i>
+                            <span>06/10/2025</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="confirmacao">
+                    <div class="confirmado">
+                        <h2 class="status">Confirmado</h2>
+                        <span>R$ 45,00</span>
+                    </div>
+                    <div class="reagendar">
+                        <button>Reagendar</button>
+                        <button>Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

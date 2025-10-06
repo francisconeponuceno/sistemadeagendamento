@@ -31,3 +31,7 @@ class UserController:
     @staticmethod
     def cadastro():
         return render_template('cadastro.html')
+    
+    @staticmethod
+    def cliete():
+        return render_template('cliente.html')
