@@ -121,12 +121,18 @@ header {
     transition: .7s ease-in-out;
     padding: 5px;
     background-color: var(--cor3);
+    border-radius: 0 0 10px 10px;
 }
 
 .menu-mobily .sub-menu-link {
     display: flex;
     flex-direction: column;
     justify-content: left;
+}
+
+.menu-mobily .sub-menu-link .login-mobili {
+    margin-bottom: 10px;
+    padding-left: 10px;
 }
 
 .menu-mobily .sub-menu-link .login-mobili i {
@@ -152,12 +158,11 @@ header {
 }
 
 .reservas .sidbar {
-    width: 25%;
     height: 250px;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
     box-shadow: 2px .1rem 1rem rgb(0, 0, 0, 0.1);
     background-color: white;
     border-radius: 10px;
@@ -185,19 +190,26 @@ header {
 
 
 .reservas .minhas-reservas {
+    width: 60%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     flex-grow: 1;
 }
 
+.reservas .minhas-reservas  .title h1 {
+    font-size: 1.8rem;
+    color: var(--cor2);
+}
+
 .reservas .minhas-reservas .card-servico {
     display: flex;
     flex-wrap: wrap;
+    flex-grow: 1;
     justify-content: space-between;
     background-color: white;
     box-shadow: 2px .1rem 1rem rgb(0, 0, 0, 0.1);
-    padding: 30px 30px;
+    padding: 20px 25px;
     border-radius: 10px;
     border: 1px solid var(--cor1);
     margin-bottom: 10px;
@@ -207,6 +219,7 @@ header {
 .reservas .minhas-reservas .card-servico .servico {
     display: flex;
     flex-wrap: wrap;
+    flex-grow: 1;
     align-items: center;
     justify-content: center;
     gap: 15px;
@@ -228,7 +241,13 @@ header {
 .reservas .minhas-reservas .card-servico .servico .descricao h2 {
     font-size: 1.2rem;
     color: var(--cor2);
+}
 
+.reservas .minhas-reservas .card-servico .servico .descricao {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-grow: 1;
 }
 
 .reservas .minhas-reservas .card-servico .servico .descricao .data-hora {
@@ -246,16 +265,18 @@ header {
 .confirmacao .confirmado {
     display: flex;
     flex-direction: column;
+    align-items: end;
     margin-bottom: 10px;
 }
 
-.confirmacao .confirmado h2{
+.confirmacao .confirmado .status{
     background-color: var(--cor5);
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
     padding: 5px;
     border-radius: 20px;
     color: var(--cor2);
+    width: 100px;
 }
 
 .confirmacao .confirmado span {
@@ -275,7 +296,7 @@ header {
 .confirmacao .reagendar button {
     border: none;
     background-color: var(--cor3);
-    padding: 5px 15px;
+    padding: 3px 15px;
     border-radius: 10px;
     color: var(--cor2);
 }
@@ -284,4 +305,30 @@ header {
 
 
 
+/* MIDIA QUERY */
 
+@media (max-width: 1072px) {
+    .menu {
+       width: 70%;
+    }
+}
+
+@media (max-width: 850px) {
+    .reservas .sidbar, .menu {
+       display: none;
+    }
+
+    .menuBuger {
+        display: flex;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 540px) {
+    .minhas-reservas .card-servico .servico {
+        flex-direction: column;
+        width: 100%;
+        background-color: #9B7C64;
+    }
+
+}
