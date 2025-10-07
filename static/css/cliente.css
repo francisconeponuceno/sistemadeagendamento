@@ -153,6 +153,7 @@ header {
 
 .reservas .sidbar {
     width: 25%;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -165,7 +166,21 @@ header {
 }
 
 .reservas .sidbar .sidbar-item {
-    margin: 15px;
+    margin: 15px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.reservas .sidbar .sidbar-item i, span {
+    color: var(--cor2);
+}
+
+.select {
+    background-color: var(--cor5);
+    padding: 8px;
+    border-radius: 10px;
 }
 
 
@@ -174,7 +189,6 @@ header {
     flex-direction: column;
     flex-wrap: wrap;
     flex-grow: 1;
-    
 }
 
 .reservas .minhas-reservas .card-servico {
@@ -183,11 +197,88 @@ header {
     justify-content: space-between;
     background-color: white;
     box-shadow: 2px .1rem 1rem rgb(0, 0, 0, 0.1);
-    padding: 10px;
+    padding: 30px 30px;
     border-radius: 10px;
     border: 1px solid var(--cor1);
+    margin-bottom: 10px;
 }
 
+
+.reservas .minhas-reservas .card-servico .servico {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.reservas .minhas-reservas .card-servico .servico .icone i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor5);
+    color: var(--cor2);
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+
+}
+
+.reservas .minhas-reservas .card-servico .servico .descricao h2 {
+    font-size: 1.2rem;
+    color: var(--cor2);
+
+}
+
+.reservas .minhas-reservas .card-servico .servico .descricao .data-hora {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--cor2);
+}
+
+.confirmacao {
+    display: flex;
+    flex-direction: column;
+}
+
+.confirmacao .confirmado {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.confirmacao .confirmado h2{
+    background-color: var(--cor5);
+    font-size: 1rem;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    color: var(--cor2);
+}
+
+.confirmacao .confirmado span {
+    color: var(--cor5);
+    font-weight: bold;
+    text-align: end;
+    font-size: 1.2rem;
+}
+
+
+.confirmacao .reagendar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.confirmacao .reagendar button {
+    border: none;
+    background-color: var(--cor3);
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: var(--cor2);
+}
 
 /* FIM ESTILO MINHAS RESERVAS */
 
