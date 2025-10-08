@@ -324,11 +324,24 @@ header {
     }
 }
 
+
 @media (max-width: 540px) {
-    .minhas-reservas .card-servico .servico {
-        flex-direction: column;
+
+    .reservas .minhas-reservas .card-servico .servico {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       margin-bottom: 5px;
+    }
+
+
+    .minhas-reservas .confirmacao {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: auto;
         width: 100%;
-        background-color: #9B7C64;
     }
 
 }
