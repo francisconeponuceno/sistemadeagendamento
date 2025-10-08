@@ -105,12 +105,14 @@ header {
 .menu-mobily {
     width: 100%;
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 65px;
     left: -100%;
     transition: .7s ease-in-out;
     padding: 5px;
     background-color: var(--cor4);
+    z-index: 1000;
+    border-radius: 0 0 10px 10px;
 }
 
 .menu-active {
@@ -124,6 +126,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 7px;
 }
 
 .sub-menu-link a {
