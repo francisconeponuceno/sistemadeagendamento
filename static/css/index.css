@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --cor1: #FEFBF5; /* Fundo / Neutro claro (background principal) */
-    --cor2: #563A22; /* Primária (títulos, menus, elementos fortes) */
-    --cor3: #F1D7B4; /* Secundária (destaques suaves, cards, caixas de apoio) */
-    --cor4: #9B7C64; /* Apoio (texto secundário, bordas, sombras sutis) */
-    --cor5: #F18836; /* Cor de Destaque (botões, links, chamadas de ação) */
-    
+    --cor1: #FEFBF5;
+    /* Fundo / Neutro claro (background principal) */
+    --cor2: #563A22;
+    /* Primária (títulos, menus, elementos fortes) */
+    --cor3: #F1D7B4;
+    /* Secundária (destaques suaves, cards, caixas de apoio) */
+    --cor4: #9B7C64;
+    /* Apoio (texto secundário, bordas, sombras sutis) */
+    --cor5: #F18836;
+    /* Cor de Destaque (botões, links, chamadas de ação) */
+
 }
 
 * {
@@ -23,7 +28,7 @@ body {
 
 /* ESTILO DE BOTOES */
 .botao {
-    width: 200px;
+    width: 220px;
     padding: 10px 20px;
     background-color: var(--cor5);
     border-radius: 10px;
@@ -36,7 +41,7 @@ body {
 .botao:hover {
     background: none;
     color: var(--cor5);
-    border:  1px solid var(--cor5);
+    border: 1px solid var(--cor5);
 }
 
 /* FIM DO ESTILO DE BOTOES */
@@ -57,7 +62,7 @@ header {
     z-index: 1000;
 }
 
-.logo{
+.logo {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -163,10 +168,11 @@ header {
     align-items: center;
     justify-content: center;
     gap: 5px;
-   
+
 }
 
-.login i, a {
+.login i,
+a {
     color: var(--cor2);
     font-size: 1.3rem;
     align-items: center;
@@ -179,20 +185,23 @@ header {
 }
 
 
-/* FIM DO ESTILO HEADER*/ 
+/* FIM DO ESTILO HEADER*/
 
 /* INICIO ESTILO BANNER*/
-.banner{
+.banner {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #9B7C64;
-    background: url('/static/imagens/img-banner/fundo.png') no-repeat;
- 
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url("../imagens/img-banner/fundo1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
+
 
 .banner .destaque {
     width: 60%;
@@ -202,7 +211,7 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
-   
+
 }
 
 .banner .destaque h1 {
@@ -226,11 +235,11 @@ header {
 }
 
 .banner .agendar .btn-sevico {
-    width: 200px;
+    width: 220px;
     padding: 10px 20px;
     background: none;
     border-radius: 10px;
-    border:  1px solid var(--cor5);
+    border: 1px solid var(--cor5);
     color: var(--cor1);
     font-weight: bolder;
     transition: calc(1s);
@@ -372,7 +381,7 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 50px;
-    
+
 }
 
 .sobre-nos .sobre img {
@@ -443,7 +452,8 @@ footer .direitos {
         font-size: 1.8rem;
     }
 
-    .menu, .login-icone {
+    .menu,
+    .login-icone {
         display: none;
     }
 
@@ -461,7 +471,7 @@ footer .direitos {
         height: 250px;
     }
 
-    .sobre-nos  h1 {
+    .sobre-nos h1 {
         font-size: 2rem;
     }
 
@@ -549,7 +559,7 @@ footer .direitos {
         width: 100%;
     }
 
-    .sobre-nos  .sobre .historia p {
+    .sobre-nos .sobre .historia p {
         font-size: 0.8rem;
         padding: 10px;
         margin-bottom: 0px;
@@ -575,7 +585,7 @@ footer .direitos {
     }
 
 
-    
+
 }
 
 /* INICIO MIDIA QUERY */
