@@ -11,13 +11,14 @@
 <body>
     <div class="container">
         <div class="principal">
-            <div class="voltar-site">
-                <i class="fa-solid fa-rotate-left"></i>
-                <form method="post">
-                    <button type="submit">Voltar ao site</button>
-                </form>
-            </div>
+
             <div class="login">
+                <div class="voltar-site">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <form method="post">
+                        <button><a href="index.html">Voltar ao site</a></button>
+                    </form>
+                </div>
                 <div class="name">
                     <i class="fa-solid fa-circle-user"></i>
                     <h1>Login Cliente</h1>
@@ -37,7 +38,7 @@
                             <div class="inputs">
                                 <input type="email" id="email" name="email" placeholder="email" required>
                                 <input type="password" id="senha" name="senha" placeholder="senha" required>
-                                <button type="submit">Entrar</button>
+                                <button type="submit"><a href="cliente.html">Entrar</a></button>
                             </div>
                             <label style="color: red;"></label>
                         </div>
@@ -46,17 +47,17 @@
                 <div class="esquecer">
                     <form method="post">
                         <label>Ainda nao tem Conta:</label>
-                        <button type="submit">Criar</button>
+                        <button type="submit"><a href="cadastro.html">Criar</a></button>
                     </form>
                     <form method="post">
                         <label>Esqueceu a Senha:</label>
                         <button type="submit">Recuperar</button>
                     </form>
-                </div> 
+                </div>
             </div>
         </div>
     </div>
 
-    
+
 </body>
 </html>
