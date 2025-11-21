@@ -35,3 +35,7 @@ class UserController:
     @staticmethod
     def cliete():
         return render_template('cliente.html')
+    
+    @staticmethod
+    def admin():
+        return render_template('admin.html')

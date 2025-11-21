@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/admin.css">
+    <title>administrador</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="/static/imagens/img-header/logo.png" alt="">
+            <h1>Barber<span>Shop</span></h1>
+        </div>
+        <div class="menu">
+            <div class="cliente">
+                <span>Área do Administrador</span>
+            </div>
+            <div class="user">
+                <div class="login">
+                    <i class="fa-solid fa-user login-icone"></i>
+                    <span>Marina Silvia</span>
+                </div>
+                <div class="login">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span><a href="login.html">Sair</a></span>
+                </div>
+            </div>
+        </div>
+        <i class="fa-solid fa-bars menuBuger" id="menu-mobili" onclick="menuShow()"></i>
+    </header>
+    <div class="menu-mobily">
+        <div class="sub-menu-link">
+            <div class="login-mobili">
+                <i class="fa-solid fa-user login-icone"></i>
+                <span>Marina Silvia</span>
+            </div>
+            <div class="login-mobili select-menu botaoMenuBurger_1" onclick="sidbarMenu_AgendaDia()">
+                <i class="fa-solid fa-calendar"></i>
+                <span>Agenda do Dia</span>
+            </div>
+            <div class="login-mobili botaoMenuBurger_2" onclick="sidbarMenu_Servicos()">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Serviços</span>
+            </div>
+            <div class="login-mobili botaoMenuBurger_3" onclick="sidbarMenu_Profifionais()">
+                <i class="fa-solid fa-users"></i>
+                <span>Profissionais</span>
+            </div>
+            <div class="login-mobili botaoMenuBurger_4" onclick="sidbarMenu_CadProfissional()">
+                <i class="fa-solid fa-plus"></i>
+                <span>profissional</span>
+            </div>
+            <div class="login-mobili botaoMenuBurger_5" onclick="sidbarMenu_cadServiço()">
+                <i class="fa-solid fa-plus"></i>
+                <span>Serviço</span>
+            </div>
+            <div class="login-mobili">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span><a href="login.html">Sair</a></span>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="reservas">
+        <div class="sidbar">
+            <div class="sidbar-item select botao_1" onclick="sidbar_agendaDia()">
+                <i class="fa-solid fa-calendar"></i>
+                <span>Agenda do Dia</span>
+            </div>
+            <div class="sidbar-item botao_2" onclick="sidbar_servicos()">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Serviços</span>
+            </div>
+            <div class="sidbar-item botao_3" onclick="sidbar_profissionais()">
+                <i class="fa-solid fa-users"></i>
+                <span>Profissionais</span>
+            </div>
+            <div class="sidbar-item botao_4" onclick="sidbar_cadProfissional()">
+                <i class="fa-solid fa-plus"></i>
+                <span>Profissional</span>
+            </div>
+            <div class="sidbar-item botao_5" onclick="sidbar_cadServiço()">
+                <i class="fa-solid fa-plus"></i>
+                <span>Serviço</span>
+            </div>
+        </div>
+
+        <!--Section Agenda do dia-->
+        <div class="minhas-reservas secao_1">
+            <div class="title">
+                <h1>Agenda do Dia</h1>
+                <form action="">
+                    <input type="text" placeholder="pesquisa">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+
+            <div class="card-servico">
+                <div class="div-table">
+                    <table class="tabela">
+                        <thead>
+                            <tr>
+                                <th>Serviço</th>
+                                <th>Valor</th>
+                                <th>Profissional</th>
+                                <th>Cliente</th>
+                                <th>Data</th>
+                                <th>Horário</th>
+                                <th>Tempo</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>Corte Mascolino</td>
+                            <td>R$ 30,00</td>
+                            <td>Joao de Deus</td>
+                            <td>Francisco</td>
+                            <td>16/10/2025</td>
+                            <td>14:30</td>
+                            <td>30 min</td>
+                            <td>
+                                <h2 class="aguard">AGUARD</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Corte Mascolino</td>
+                            <td>R$ 30,00</td>
+                            <td>Marina Silvia</td>
+                            <td>maria de jesus</td>
+                            <td>16/10/2025</td>
+                            <td>14:30</td>
+                            <td>30 min</td>
+                            <td>
+                                <h2 class="atendido">ATENDIDO</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hidratação</td>
+                            <td>R$ 50,00</td>
+                            <td>Marina Silvia</td>
+                            <td>Jose da Silva</td>
+                            <td>16/10/2025</td>
+                            <td>14:30</td>
+                            <td>30 min</td>
+                            <td>
+                                <h2 class="cancelado">CANCELADO</h2>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!--Section de Serviços-->
+        <div class="ocuto secao_2">
+            <div class="title">
+                <h1>Serviços</h1>
+                <form action="">
+                    <input type="text" placeholder="pesquisa">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+            <div class="card-servico">
+                <div class="div-table">
+                    <table class="tabela">
+                        <thead>
+                            <tr>
+                                <th>Serviço</th>
+                                <th>Valor</th>
+                                <th>Tempo estimado</th>
+                                <th>Editar</th>
+                                <th>Excluir</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>Corte Mascolino</td>
+                            <td>R$ 30</td>
+                            <td>30 min</td>
+                            <td>
+                                <form method="post" action="">
+                                    <button type="submit" class="fa-solid fa-pen-to-square btn"></button>
+                                </form>
+                            </td>
+                            <td>
+                                <form method="post" action="">
+                                    <button class="fa-solid fa-trash btn"></button>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Corte Mascolino</td>
+                            <td>R$ 30</td>
+                            <td>30 min</td>
+                            <td>
+                                <form method="post" action="">
+                                    <button type="submit" class="fa-solid fa-pen-to-square btn"></button>
+                                </form>
+                            </td>
+                            <td>
+                                <form method="post" action="">
+                                    <button class="fa-solid fa-trash btn"></button>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!--Section de Profissionais-->
+        <div class="ocuto secao_3">
+            <div class="title">
+                <h1>Profissionais</h1>
+                <form action="">
+                    <input type="text" placeholder="pesquisa">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+            <div class="card-servico">
+                <div class="div-table">
+                    <table class="tabela">
+                        <thead>
+                            <tr>
+                                <th>Profissional</th>
+                                <th>Especialidades</th>
+                                <th>Horário Atendimento</th>
+                                <th>Telefone</th>
+                                <th>Editar</th>
+                                <th>Excluir</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>João Silva</td>
+                            <td>Corte masculino,Barba</td>
+                            <td>Seg-Sex, 09:00-18:00</td>
+                            <td>86 99999-9999</td>
+                            <td>
+                                <form method="post" action="">
+                                    <button type="submit" class="fa-solid fa-pen-to-square btn"></button>
+                                </form>
+                            </td>
+                            <td>
+                                <form method="post" action="">
+                                    <button class="fa-solid fa-trash btn"></button>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Marina Silvia</td>
+                            <td>Corte Femenino, Hidratação</td>
+                            <td>Ter-sáb 10:00-19:00</td>
+                            <td>86 99999-9999</td>
+                            <td>
+                                <form method="post" action="">
+                                    <button type="submit" class="fa-solid fa-pen-to-square btn"></button>
+                                </form>
+                            </td>
+                            <td>
+                                <form method="post" action="">
+                                    <button class="fa-solid fa-trash btn"></button>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!--Section de cadastro de profissionais-->
+        <div class="ocuto secao_4">
+            <div class="title">
+                <h1>Cadastro de Profissionais</h1>
+            </div>
+            <div class="card-servico">
+                <div class="perfil">
+                    <div class="formulario">
+                        <form action="">
+                            <label for="">Nome:</label>
+                            <input type="text">
+                            <label for="">Especialidades:</label>
+                            <input type="text">
+                            <label for="">Horário Atendimento</label>
+                            <input type="text">
+                            <label for="">Telefone:</label>
+                            <input type="tel">
+                            <div class="botoes">
+                                <button class="botao"><i class="fa-solid fa-address-card"></i> cadastrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Section de cadastro de serviço-->
+        <div class="ocuto secao_5">
+            <div class="title">
+                <h1>Cadastro de Serviços</h1>
+            </div>
+            <div class="card-servico">
+                <div class="perfil">
+                    <div class="formulario">
+                        <form action="">
+                            <label for="">Serviço:</label>
+                            <input type="text">
+                            <label for="">Valor:</label>
+                            <input type="number">
+                            <label for="">Tempo estimado:</label>
+                            <input type="text">
+                            <div class="botoes">
+                                <button class="botao"><i class="fa-solid fa-address-card"></i> Cadastrar</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Section de Reagendamento-->
+        <!-- === MODAL (FORMULÁRIO DE REAGENDAMENTO) === -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">x</span>
+                <h2>Reagendar Serviço</h2>
+                <form id="form-reagendar">
+                    <label for="servico">Selecione um Serviço:</label>
+                    <select name="servico" id="servico">
+                        <option value=""></option>
+                        <option value="Corte_Mascolino">Corte Masculino</option>
+                        <option value="Corte_Femenino">Corte Feminino</option>
+                        <option value="Barba_&_Bigode">Barba & Bigode</option>
+                        <option value="Hidratação">Hidratação</option>
+                    </select>
+
+                    <label for="profissional">Selecione um Profissional:</label>
+                    <select name="profissional" id="profissional">
+                        <option value=""></option>
+                        <option value="Joao_de_Deus">João de Deus</option>
+                        <option value="Marina_Silvia">Marina Silvia</option>
+                        <option value="Frederico">Frederico</option>
+                    </select>
+                    <label for="input-data">Data:</label>
+                    <input type="date" id="input-data">
+                    <label for="input-hora">Hora:</label>
+                    <input type="time" id="input-hora">
+                    <div class="form-botao">
+                        <button class="botao-modal" type="submit"><i class="fa-solid fa-calendar-check"></i>
+                            reagendar</button>
+                        <button class="botao-modal" type="submit"><i class="fa-solid fa-trash"></i> Excluir</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </section>
+    <script src="/static/js/scrips_admin.js"></script>
+</body>
+
+</html>
