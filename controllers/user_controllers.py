@@ -39,3 +39,7 @@ class UserController:
     @staticmethod
     def admin():
         return render_template('admin.html')
+    
+    @staticmethod
+    def agendar():
+        return render_template('agendar.html')
