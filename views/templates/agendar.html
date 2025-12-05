@@ -10,44 +10,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/static/css/cliente.css">
+    <link rel="stylesheet" href="/static/css/agendar.css">
     <title>Cliente</title>
 </head>
 
 <body>
     
-    <div class="menu-mobily">
-        <div class="sub-menu-link">
-            <div class="login-mobili">
-                <i class="fa-solid fa-user login-icone"></i>
-                <span>Marina Silvia</span>
-            </div>
-            <div class="login-mobili select-menu botaoMenuBurger_1" onclick="sidbarMenu_reservas()">
-                <i class="fa-solid fa-calendar"></i>
-                <span>Minhas Reservas</span>
-            </div>
-            <div class="login-mobili botaoMenuBurger_2" onclick="sidbarMenu_agendamento()">
-                <i class="fa-solid fa-plus"></i>
-                <span>Novo Agendamento</span>
-            </div>
-            <div class="login-mobili botaoMenuBurger_3" onclick="sidbarMenu_perfil()">
-                <i class="fa-solid fa-user login-icone"></i>
-                <span>Meu Perfil</span>
-            </div>
-            <div class="login-mobili">
-                <i class="fa-solid fa-right-from-bracket"></i>
-                <span><a href="login.html">Sair</a></span>
-            </div>
-        </div>
-    </div>
 
     <section class="reservas">
         
-
         <!--Section Minhas Reservas-->
         <div class="minhas-reservas secao_1">
             <div class="title">
-                <h1>Minhas Reservas</h1>
+                <h1>Voltar</h1>
+                <h1>Selecione o Profissional</h1>
             </div>
             <div class="card-servico">
                 <div class="servico">
@@ -69,12 +45,7 @@
                 </div>
                 <div class="confirmacao">
                     <div class="confirmado">
-                        <h2 class="aguard">AGUARD</h2>
                         <span>R$ 45,00</span>
-                    </div>
-                    <div class="reagendar">
-                        <button class="btn-reagendar" onclick="reagendar()"><i class="fa-solid fa-newspaper"></i>
-                            Reagendar</button>
                     </div>
                 </div>
             </div>
@@ -98,12 +69,7 @@
                 </div>
                 <div class="confirmacao">
                     <div class="confirmado">
-                        <h2 class="atendido">ATENDIDO</h2>
                         <span>R$ 45,00</span>
-                    </div>
-                    <div class="reagendar">
-                        <button class="btn-reagendar" onclick="reagendar()"><i class="fa-solid fa-newspaper"></i>
-                            Reagendar</button>
                     </div>
                 </div>
             </div>
@@ -127,122 +93,17 @@
                 </div>
                 <div class="confirmacao">
                     <div class="confirmado">
-                        <h2 class="cancelado">CANCELADO</h2>
                         <span>R$ 45,00</span>
                     </div>
-                    <div class="reagendar">
-                        <button class="btn-reagendar" onclick="reagendar()"><i class="fa-solid fa-newspaper"></i>
-                            Reagendar</button>
-                    </div>
+                    
                 </div>
             </div>
 
         </div>
 
-        <!--Section de Agendamento-->
-        <div class="ocuto secao_2">
-            <div class="title">
-                <h1>Novo Agendamento</h1>
-            </div>
-            <div class="card-servico">
-                <div class="perfil">
-                    <h2>Agendar Serviço</h2>
-                    <div class="formulario">
-                        <form action="">
-                            <label for="servico">Selecione um Serviço:</label>
-                            <select name="sevico" id="servico">
-                                <option value=""></option>
-                                <option value="Corte_Mascolino">Corte Mascolino</option>
-                                <option value="Corte_Femenino">Corte Femenino</option>
-                                <option value="Barba_&_Bigode">Barba & Bigode</option>
-                                <option value="Hidratação">Hidratação</option>
-                            </select>
-                            <label for="profissional">Selecione um Profissional:</label>
-                            <select name="profissional" id="profissional">
-                                <option value=""></option>
-                                <option value="Jão_de_Deus">Jão de Deus</option>
-                                <option value="Marina_Silvia">Marina Silvia</option>
-                                <option value="Marcelo_de_Castro">Marcelo de Castro</option>
-                                <option value="Fabio_de_Jesus">Fabio de Jesus</option>
-                            </select>
-                            <label for="">Data do Agendamento:</label>
-                            <input type="date">
-                            <label for="">Horários Disponível:</label>
-                            <input type="time">
-                            <div class="botoes">
-                                <button class="botao"><i class="fa-solid fa-calendar-check"></i> Agendar</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--Section de Perfil-->
-        <div class="ocuto secao_3">
-            <div class="title">
-                <h1>Meu Perfil</h1>
-            </div>
-            <div class="card-servico">
-                <div class="perfil">
-                    <h2>Informações Pessoais</h2>
-                    <div class="formulario">
-                        <h4>Editar</h4>
-                        <form action="">
-                            <label for="">Nome:</label>
-                            <input type="text" value="Marina Silvia">
-                            <label for="">Email:</label>
-                            <input type="email" value="franciscocan1986@gmail.com">
-                            <label for="">Telefone:</label>
-                            <input type="tel" value="86 99452-0423">
-                            <div class="botoes">
-                                <button class="botao"><i class="fa-solid fa-rotate-right"></i> Atualizar</button>
-                                <button class="botao"><i class="fa-solid fa-trash"></i> Excluir</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--Section de Reagendamento-->
-        <!-- === MODAL (FORMULÁRIO DE REAGENDAMENTO) === -->
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="close">x</span>
-                <h2>Reagendar Serviço</h2>
-                <form id="form-reagendar">
-                    <label for="servico">Selecione um Serviço:</label>
-                    <select name="servico" id="servico">
-                        <option value=""></option>
-                        <option value="Corte_Mascolino">Corte Masculino</option>
-                        <option value="Corte_Femenino">Corte Feminino</option>
-                        <option value="Barba_&_Bigode">Barba & Bigode</option>
-                        <option value="Hidratação">Hidratação</option>
-                    </select>
-
-                    <label for="profissional">Selecione um Profissional:</label>
-                    <select name="profissional" id="profissional">
-                        <option value=""></option>
-                        <option value="Joao_de_Deus">João de Deus</option>
-                        <option value="Marina_Silvia">Marina Silvia</option>
-                        <option value="Frederico">Frederico</option>
-                    </select>
-                    <label for="input-data">Data:</label>
-                    <input type="date" id="input-data">
-                    <label for="input-hora">Hora:</label>
-                    <input type="time" id="input-hora">
-                    <div class="form-botao">
-                        <button class="botao-modal" type="submit"><i class="fa-solid fa-calendar-check"></i>
-                            reagendar</button>
-                        <button class="botao-modal" type="submit"><i class="fa-solid fa-trash"></i> Excluir</button>
-                    </div>
-                </form>
-            </div>
-        </div>
 
     </section>
-    <script src="/static/js/script.js"></script>
+    <script src="/static/js/agendar.js"></script>
 </body>
 
 </html>
