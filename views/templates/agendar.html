@@ -11,7 +11,7 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/static/css/agendar.css">
-    <title>Cliente</title>
+    <title>Agendamento</title>
 </head>
 
 <body>
@@ -25,21 +25,16 @@
                 <form action="">
                     <button type="submit" class="botao" id="voltar">voltar</button>
                 </form>
-                <h1>Etapas <span>1 de 5</span></h1>
+                <h1>Etapas <span>{{ContEtapa}} de 5</span></h1>
+                <div class="etapa">
+                    <div class="etapa-filho etapa1">
+                    </div>
+                </div>
             </div>
             <div class="card-servico">
                 <div class="servico">
                     <div class="descricao">
                         <h2>Escolha o Profissional</h2>
-                        <span>Com João</span>
-                        <div class="data-hora">
-                            <i class="fa-solid fa-calendar"></i>
-                            <span>06/10/2025</span>
-                        </div>
-                        <div class="data-hora">
-                            <i class="fa-solid fa-clock"></i>
-                            <span>20:30</span>
-                        </div>
                     </div>
                 </div>
                 <div class="confirmacao">

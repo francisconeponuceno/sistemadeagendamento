@@ -42,4 +42,5 @@ class UserController:
     
     @staticmethod
     def agendar():
-        return render_template('agendar.html')
+        ContEtapa = 1
+        return render_template('agendar.html',ContEtapa=ContEtapa)
