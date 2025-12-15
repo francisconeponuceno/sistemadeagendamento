@@ -62,7 +62,7 @@ class Profissional(db.Model):
     Id_Profissional = db.Column(db.Integer, primary_key=True)
     No_Profissional = db.Column(db.String(50), nullable=False)
     Nr_Telefone = db.Column(db.String(20), nullable=False)
-    No_Email = db.Column(db.String(100), nullable=False, unique=True)
+    Hr_Atendimento = db.Column(db.String(30), nullable=False)
     No_Especialidade = db.Column(db.String(50))
     No_Senha = db.Column(db.String(50), unique=True)
     Tp_Entrada = db.Column(db.String(1), nullable=False, default='P')

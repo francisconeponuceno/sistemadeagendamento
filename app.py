@@ -21,5 +21,9 @@ app.add_url_rule('/admin', 'admin', UserController.admin, methods=['POST', 'GET'
 app.add_url_rule('/agendar', 'agendar', UserController.agendar, methods=['POST', 'GET'])
 
 
+
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)

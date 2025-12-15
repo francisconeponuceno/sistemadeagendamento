@@ -36,11 +36,24 @@ class UserController:
     def cliete():
         return render_template('cliente.html')
     
+
+    # ROTA DO ADMINISTRADOR
     @staticmethod
     def admin():
         return render_template('admin.html')
-    
+
     @staticmethod
     def agendar():
         ContEtapa = 1
         return render_template('agendar.html',ContEtapa=ContEtapa)
+    
+    #ROTA CADASTRO DE PROFISSIONAL
+    @staticmethod
+    def CadProfissional():
+        if request.method == 'POST':
+            nome = request.form['nome']
+            especialidade = request.form['especialidade']
+            horadio_atendimento = request.form['h_atendimento']
+            telefone = request.form['telefone']
+
+
