@@ -1,5 +1,5 @@
 from flask import render_template, redirect, request, url_for
-from models.user import User, db
+from models.user import User, Cliente, Profissional, Servico, Agendamento, db
 
 
 class UserController:
@@ -55,5 +55,10 @@ class UserController:
             especialidade = request.form['especialidade']
             horadio_atendimento = request.form['h_atendimento']
             telefone = request.form['telefone']
+            new_profissional = Profissional(No_Profissional=nome, Nr_Telefone=telefone, Hr_Atendimento=horadio_atendimento, No_Especialidade=especialidade,)
+            db.session.add(new_profissional)
+            db.session.commit()
+            return render_template('admin.html')
+
 
 
