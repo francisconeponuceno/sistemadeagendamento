@@ -5,14 +5,15 @@ from controllers.user_controllers import UserController
 from models.user import db, migrate
 
 
+# INSTANCIANDO O FLASK
 app = Flask(__name__, template_folder=os.path.join('views', 'templates' ))
 app.config.from_object(Config)
 
-# inicializa o banco de dados
+# INICIALIZANDO O BANCO DE DADOS
 db.init_app(app)
 migrate.init_app(app, db)
 
-
+# REGISTRANDO AS ROTAS
 app.add_url_rule('/', 'index', UserController.index)
 app.add_url_rule('/login','login', UserController.login, methods=['POST','GET'])
 app.add_url_rule('/cadastro', 'cadastro', UserController.cadastro, methods=['POST','GET'])
