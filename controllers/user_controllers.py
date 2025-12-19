@@ -39,7 +39,8 @@ class UserController:
     # ROTA DO ADMINISTRADOR
     @staticmethod
     def admin():
-        return render_template('admin.html')
+        DadosProf = Profissional.query.all()
+        return render_template('admin.html',DadosProf=DadosProf)
 
     @staticmethod
     def agendar():
@@ -50,11 +51,19 @@ class UserController:
     @staticmethod
     def CadProfissional():
         if request.method == 'POST':
-            return render_template("admin.html")
-            #nome = request.form['nome']
-            #especialidade = request.form['especialidade']
-            #horadio_atendimento = request.form['h_atendimento']
-            #telefone = request.form['telefone']
-            #new_profissional = Profissional(No_Profissional=nome, Nr_Telefone=telefone, Hr_Atendimento=horadio_atendimento, No_Especialidade=especialidade,)
-            #db.session.add(new_profissional)
-            #db.session.commit()
+            nome = request.form['nome']
+            especialidade = request.form['especialidade']
+            horadio_atendimento = request.form['h_atendimento']
+            telefone = request.form['telefone']
+            new_profissional = Profissional(No_Profissional=nome, Nr_Telefone=telefone, Hr_Atendimento=horadio_atendimento, No_Especialidade=especialidade,)
+            db.session.add(new_profissional)
+            db.session.commit()
+            return redirect("admin")
+
+    # ROTA DELETE PROFISSIONAL
+    @staticmethod
+    def DeleteProfissional(Id_Profissional):
+        if Id_Profissional:
+            db.session.delete(Id_Profissional)
+            db.session.commit()
+            return redirect('admin')

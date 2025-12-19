@@ -19,11 +19,12 @@ app.add_url_rule('/cadastro', 'cadastro', UserController.cadastro, methods=['POS
 app.add_url_rule('/cliente', 'cliente', UserController.cliete, methods=['POST', 'GET'])
 app.add_url_rule('/admin', 'admin', UserController.admin, methods=['POST', 'GET'])
 app.add_url_rule('/agendar', 'agendar', UserController.agendar, methods=['POST', 'GET'])
+
+
+# ROTAS DA DO CRUD PROFISSIONAL
 app.add_url_rule('/CadProfissional', 'CadProfissional', UserController.CadProfissional, methods=['POST','GET'])
-
-
-
-
+app.add_url_rule("/DeleteProfissional/<int:Id_Profissional>","DeleteProfissional/<int:Id_Profissional>",UserController.DeleteProfissional,methods=["POST", "GET"],
+)
 
 
 if __name__ == '__main__':

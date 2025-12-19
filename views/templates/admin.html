@@ -239,38 +239,25 @@
                                 <th>Excluir</th>
                             </tr>
                         </thead>
-                        <tr>
-                            <td>João Silva</td>
-                            <td>Corte masculino,Barba</td>
-                            <td>Seg-Sex, 09:00-18:00</td>
-                            <td>86 99999-9999</td>
-                            <td>
-                                <form method="post" action="">
-                                    <button type="submit" class="fa-solid fa-pen-to-square btn"></button>
-                                </form>
-                            </td>
-                            <td>
-                                <form method="post" action="">
-                                    <button class="fa-solid fa-trash btn"></button>
-                                </form>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Marina Silvia</td>
-                            <td>Corte Femenino, Hidratação</td>
-                            <td>Ter-sáb 10:00-19:00</td>
-                            <td>86 99999-9999</td>
-                            <td>
-                                <form method="post" action="">
-                                    <button type="submit" class="fa-solid fa-pen-to-square btn"></button>
-                                </form>
-                            </td>
-                            <td>
-                                <form method="post" action="">
-                                    <button class="fa-solid fa-trash btn"></button>
-                                </form>
-                            </td>
-                        </tr>
+                        {% for profissional in DadosProf %}
+                            <tr>
+                                <td>{{ profissional.No_Profissional }}</td>
+                                <td>{{ profissional.No_Especialidade }}</td>
+                                <td>{{ profissional.Hr_Atendimento }}</td>
+                                <td>{{ profissional.Nr_Telefone }}</td>
+                                <td>
+                                    <form action="/update/{{ profissional.Id_Profissional }}" method="post">
+                                        <button type="submit" class="fa-solid fa-pen-to-square btn"></button>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="/DeleteProfissional/{{ profissional.Id_Profissional }}" method="post">
+                                        <button class="fa-solid fa-trash btn"></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        
                     </table>
                 </div>
             </div>
