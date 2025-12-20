@@ -60,10 +60,19 @@ class UserController:
             db.session.commit()
             return redirect("admin")
 
+    @staticmethod
+    def updatedelete(Id_Profissional):
+
+        if request.method == 'POST':
+            profissional = Profissional.query.get_or_404(Id_Profissional)
+            
+            return render_template("updatedelete.html", profissional=profissional)
+
     # ROTA DELETE PROFISSIONAL
     @staticmethod
     def DeleteProfissional(Id_Profissional):
-        if Id_Profissional:
-            db.session.delete(Id_Profissional)
-            db.session.commit()
-            return redirect('admin')
+
+        profissional = Profissional.query.get_or_404(Id_Profissional)
+        db.session.delete(profissional)
+        db.session.commit()
+        return redirect("/admin")

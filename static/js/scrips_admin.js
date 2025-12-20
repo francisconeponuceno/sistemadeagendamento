@@ -276,61 +276,10 @@ function sidbarMenu_cadServiço() {
 
 // FUNÇÃO DE REAGENDAMENTO
 
-const botoes = document.querySelectorAll('.btn-reagendar');
+const botoes = document.querySelectorAll('btn');
 const modal = document.getElementById('modal');
-const closeBtn = document.querySelector('.close');
-
-botoes.forEach(botao => {
-  botao.addEventListener('click', () => {
-    const card = botao.closest('.card-servico');
-
-    const servicoTexto = card.querySelector('.descricao h2').textContent.trim();
-    const profissional = card.querySelector('.descricao span').textContent.replace('Com ', '').trim();
-    const spans = card.querySelectorAll('.data-hora span');
-    const data = spans[0].textContent.trim();
-    const hora = spans[1].textContent.trim();
-
-    // Converter data para formato yyyy-mm-dd
-    const [dia, mes, ano] = data.split('/');
-    const dataFormatada = `${ano}-${mes}-${dia}`;
-
-    // Mapeamento dos serviços
-    const mapaServicos = {
-      "Corte Masculino": "Corte_Mascolino",
-      "Corte Feminino": "Corte_Femenino",
-      "Barba & Bigode": "Barba_&_Bigode",
-      "Hidratação": "Hidratação"
-    };
-    const valorSelect = mapaServicos[servicoTexto] || "";
-
-    // Mapeamento dos profissionais
-    const mapaProfissionais = {
-      "João de Deus": "Joao_de_Deus",
-      "Marina Silvia": "Marina_Silvia",
-      "Frederico": "Frederico",
-    };
-    const valorProf = mapaProfissionais[profissional] || "";
 
 
-    // Preenche o formulário
-    document.getElementById('servico').value = valorSelect;
-    document.getElementById('profissional').value = valorProf;
-    document.getElementById('input-data').value = dataFormatada;
-    document.getElementById('input-hora').value = hora;
 
-    // Abre o modal
-    modal.style.display = 'block';
-  });
-});
 
-// Fecha o modal ao clicar no "X"
-closeBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
 
-// Fecha o modal clicando fora dele
-window.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.style.display = 'none';
-  }
-});

@@ -251,7 +251,7 @@
                                     </form>
                                 </td>
                                 <td>
-                                    <form action="/DeleteProfissional/{{ profissional.Id_Profissional }}" method="post">
+                                    <form action="/updatedelete/{{ profissional.Id_Profissional }}" method="post">
                                         <button class="fa-solid fa-trash btn"></button>
                                     </form>
                                 </td>
@@ -289,6 +289,8 @@
             </div>
         </div>
 
+        
+
         <!--Section de cadastro de serviço-->
         <div class="ocuto secao_5">
             <div class="title">
@@ -314,41 +316,8 @@
         </div>
 
 
-        <!--Section de Reagendamento-->
-        <!-- === MODAL (FORMULÁRIO DE REAGENDAMENTO) === -->
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="close">x</span>
-                <h2>Reagendar Serviço</h2>
-                <form id="form-reagendar">
-                    <label for="servico">Selecione um Serviço:</label>
-                    <select name="servico" id="servico">
-                        <option value=""></option>
-                        <option value="Corte_Mascolino">Corte Masculino</option>
-                        <option value="Corte_Femenino">Corte Feminino</option>
-                        <option value="Barba_&_Bigode">Barba & Bigode</option>
-                        <option value="Hidratação">Hidratação</option>
-                    </select>
-
-                    <label for="profissional">Selecione um Profissional:</label>
-                    <select name="profissional" id="profissional">
-                        <option value=""></option>
-                        <option value="Joao_de_Deus">João de Deus</option>
-                        <option value="Marina_Silvia">Marina Silvia</option>
-                        <option value="Frederico">Frederico</option>
-                    </select>
-                    <label for="input-data">Data:</label>
-                    <input type="date" id="input-data">
-                    <label for="input-hora">Hora:</label>
-                    <input type="time" id="input-hora">
-                    <div class="form-botao">
-                        <button class="botao-modal" type="submit"><i class="fa-solid fa-calendar-check"></i>
-                            reagendar</button>
-                        <button class="botao-modal" type="submit"><i class="fa-solid fa-trash"></i> Excluir</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+        
+        
 
     </section>
     <script src="/static/js/scrips_admin.js"></script>
