@@ -179,39 +179,21 @@
                                 <th>Valor</th>
                                 <th>Tempo estimado</th>
                                 <th>Editar</th>
-                                <th>Excluir</th>
                             </tr>
                         </thead>
-                        <tr>
-                            <td>Corte Mascolino</td>
-                            <td>R$ 30</td>
-                            <td>30 min</td>
-                            <td>
-                                <form method="post" action="">
-                                    <button type="submit" class="fa-solid fa-pen-to-square btn"></button>
-                                </form>
-                            </td>
-                            <td>
-                                <form method="post" action="">
-                                    <button class="fa-solid fa-trash btn"></button>
-                                </form>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Corte Mascolino</td>
-                            <td>R$ 30</td>
-                            <td>30 min</td>
-                            <td>
-                                <form method="post" action="">
-                                    <button type="submit" class="fa-solid fa-pen-to-square btn"></button>
-                                </form>
-                            </td>
-                            <td>
-                                <form method="post" action="">
-                                    <button class="fa-solid fa-trash btn"></button>
-                                </form>
-                            </td>
-                        </tr>
+
+                        {% for dados in DadosServico %}
+                            <tr>
+                                <td>{{ dados.No_Servico }}</td>
+                                <td>{{ dados.Pr_Servico }}</td>
+                                <td>{{ dados.Tp_Estimado }}</td>
+                                <td>
+                                    <form method="post" action="">
+                                        <button type="submit" class="fa-solid fa-pen-to-square btn"></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% endfor %}
                     </table>
                 </div>
             </div>
@@ -236,7 +218,6 @@
                                 <th>Horário Atendimento</th>
                                 <th>Telefone</th>
                                 <th>Editar</th>
-                                <th>Excluir</th>
                             </tr>
                         </thead>
                         {% for profissional in DadosProf %}
@@ -246,13 +227,8 @@
                                 <td>{{ profissional.Hr_Atendimento }}</td>
                                 <td>{{ profissional.Nr_Telefone }}</td>
                                 <td>
-                                    <form action="/update/{{ profissional.Id_Profissional }}" method="post">
-                                        <button type="submit" class="fa-solid fa-pen-to-square btn"></button>
-                                    </form>
-                                </td>
-                                <td>
-                                    <form action="/updatedelete/{{ profissional.Id_Profissional }}" method="post">
-                                        <button class="fa-solid fa-trash btn"></button>
+                                    <form action="/crudProfissional/{{ profissional.Id_Profissional }}" method="post">
+                                        <button class="fa-solid fa-pen-to-square btn"></button>
                                     </form>
                                 </td>
                             </tr>
@@ -299,16 +275,16 @@
             <div class="card-servico">
                 <div class="perfil">
                     <div class="formulario">
-                        <form action="">
+                        <form action="/CadServico" method="post">
                             <label for="">Serviço:</label>
-                            <input type="text">
+                            <input type="text" name="servico" required>
                             <label for="">Valor:</label>
-                            <input type="number">
+                            <input type="number" name="valor" required>
                             <label for="">Tempo estimado:</label>
-                            <input type="text">
+                            <input type="text" name="tempo" required>
                             <div class="botoes">
                                 <button class="botao"><i class="fa-solid fa-address-card"></i> Cadastrar</button>
-
+                            </div>
                         </form>
                     </div>
                 </div>

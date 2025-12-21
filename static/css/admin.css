@@ -471,17 +471,6 @@ option {
     gap: 5px;
 }
 
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 .close {
     position: absolute;
@@ -506,6 +495,8 @@ option {
 button:hover {
     background-color: #cc6e22;
 }
+
+
 
 /* FIM DO ESTILO MODAL */
 

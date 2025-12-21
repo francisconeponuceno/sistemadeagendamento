@@ -22,10 +22,15 @@ app.add_url_rule('/admin', 'admin', UserController.admin, methods=['POST', 'GET'
 app.add_url_rule('/agendar', 'agendar', UserController.agendar, methods=['POST', 'GET'])
 
 
-# ROTAS DA DO CRUD PROFISSIONAL
+# ROTAS DO CRUD PROFISSIONAL
 app.add_url_rule('/CadProfissional', 'CadProfissional', UserController.CadProfissional, methods=['POST','GET'])
+app.add_url_rule("/crudProfissional/<int:Id_Profissional>","crudProfissional",UserController.crudProfissional,methods=["POST", "GET"])
+app.add_url_rule("/updateProfissional/<int:Id_Profissional>", "updateProfissional", UserController.updateProfissional, methods=['POST', 'GET'])
 app.add_url_rule("/DeleteProfissional/<int:Id_Profissional>","DeleteProfissional",UserController.DeleteProfissional,methods=["POST", "GET"])
-app.add_url_rule("/updatedelete/<int:Id_Profissional>","updatedelete",UserController.updatedelete,methods=["POST", "GET"],)
+
+
+# ROTAS DO CRUD SERVIÇO
+app.add_url_rule('/CadServico', 'cadServico', UserController.CadServico, methods=['POST', 'GET'])
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -17,12 +17,12 @@
 <body>
     
 
-    <!-- === MODAL (FORMULÁRIO DE UPDATE / DELETE) === -->
-    <div id="modal" class="modal">
+    <!-- === MODAL (FORMULÁRIO DE UPDATE / DELETE PROFISSIONAL) === -->
+    <div id="modalProfissional" class="modal">
         <div class="modal-content">
             <span class="close">x</span>
             <h2>Edite ou Exclua</h2>
-            <form id="form-reagendar">
+            <form action="/updateProfissional/{{ profissional.Id_Profissional }}" method="post">
                 <label for="">Nome:</label>
                 <input type="text" name="nome" value="{{ profissional.No_Profissional }}">
                 <label for="">Especialidades:</label>
@@ -34,11 +34,13 @@
                 <div class="form-botao">
                     <button class="botao-modal" type="submit"><i class="fa-solid fa-pen-to-square"></i>
                         Editar</button>
-                    <button class="botao-modal" type="submit"><i class="fa-solid fa-trash"></i> Excluir</button>
+                    <button class="botao-modal" type="submit" formaction="/DeleteProfissional/{{ profissional.Id_Profissional }}"><i class="fa-solid fa-trash"></i> Excluir</button>
                 </div>
             </form>
         </div>
     </div>
+
+    
     <script src="/static/js/admin.js"></script>
 </body>
 
