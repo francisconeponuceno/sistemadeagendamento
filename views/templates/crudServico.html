@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/admin.css">
+    <title>Agendamento</title>
+</head>
+
+<body>
+    
+
+    <!-- === MODAL (FORMULÁRIO DE UPDATE / DELETE PROFISSIONAL) === -->
+    <div id="modalProfissional" class="modal">
+        <div class="modal-content">
+            <span class="close">x</span>
+            <h2>Edite ou Exclua</h2>
+            <form action="/updateServico/{{ servico.Id_Servico }}" method="post">
+                <label for="">Serviço:</label>
+                <input type="text" name="servico" value="{{ servico.No_Servico }}">
+                <label for="">Valor:</label>
+                <input type="number" name="valor" value="{{ servico.Pr_Servico }}">
+                <label for="">Tempo estimado:</label>
+                <input type="text" name="tempo" value="{{ servico.Tp_Estimado }}">
+                <div class="form-botao">
+                    <button class="botao-modal" type="submit"><i class="fa-solid fa-pen-to-square"></i>
+                        Editar</button>
+                    <button class="botao-modal" type="submit" formaction="/DeleteServico/{{ servico.Id_Servico }}"><i class="fa-solid fa-trash"></i> Excluir</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="/static/js/admin.js"></script>
+</body>
+
+</html>

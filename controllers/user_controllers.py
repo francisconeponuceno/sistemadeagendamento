@@ -108,3 +108,32 @@ class UserController:
 
 
     # ROTA UPDATE / DELETE
+    @staticmethod
+    def crudServico(Id_Servico):
+        if request.method == 'POST':
+            servico = Servico.query.get_or_404(Id_Servico)
+            return render_template('crudServico.html', servico=servico)
+        
+
+    # ROTA UPDATE SERVICO
+    @staticmethod
+    def updateServico(Id_Servico):
+        if request.method == 'POST':
+            servico = Servico.query.get_or_404(Id_Servico)
+            servico.No_Servico = request.form['servico'].upper().strip()
+            servico.Pr_Servico = request.form['valor'].strip()
+            servico.Tp_Estimado = request.form['tempo']
+            db.session.commit()
+            return redirect("/admin")
+        
+    @staticmethod
+    def DeleteServico(Id_Servico):
+        if request.method == 'POST':
+            servico = Servico.query.get_or_404(Id_Servico)
+            db.session.delete(servico)
+            db.session.commit()
+            return redirect("/admin")
+
+        
+
+

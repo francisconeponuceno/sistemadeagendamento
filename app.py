@@ -31,6 +31,9 @@ app.add_url_rule("/DeleteProfissional/<int:Id_Profissional>","DeleteProfissional
 
 # ROTAS DO CRUD SERVIÇO
 app.add_url_rule('/CadServico', 'cadServico', UserController.CadServico, methods=['POST', 'GET'])
+app.add_url_rule('/crudServico/<int:Id_Servico>', 'crudServico', UserController.crudServico, methods=['POST', 'GET'])
+app.add_url_rule('/updateServico/<int:Id_Servico>', 'updateServico', UserController.updateServico, methods=['POST', 'GET'])
+app.add_url_rule('/DeleteServico/<int:Id_Servico>', 'DeleteServico', UserController.DeleteServico, methods=['POST', 'GET'])
 
 if __name__ == '__main__':
     app.run(debug=True)
