@@ -97,11 +97,22 @@ class UserController:
     @staticmethod
     def CadServico():
         if request.method == 'POST':
-            servico = request.form['servico'].upper()
+            servico = request.form['servico'].upper().strip()
             valor = request.form['valor']
-            tempo = request.form['tempo'].upper()
+            tempo = request.form['tempo'].upper().strip()
+            descricao1 = request.form['descricao1'].upper().strip()
+            descricao2 = request.form['descricao2'].upper().strip()
+            descricao3 = request.form['descricao3'].upper().strip()
+            descricao4 = request.form['descricao4'].upper().strip()
 
-            new_servico = Servico(No_Servico=servico, Pr_Servico=valor, Tp_Estimado=tempo)
+            new_servico = Servico(No_Servico=servico,
+                                Pr_Servico=valor,
+                                Tp_Estimado=tempo, 
+                                Dc_Descricao1=descricao1,
+                                Dc_Descricao2=descricao2,
+                                Dc_Descricao3=descricao3,
+                                Dc_Descricao4=descricao4
+                                )
             db.session.add(new_servico)
             db.session.commit()
             return redirect("/admin")
@@ -123,6 +134,10 @@ class UserController:
             servico.No_Servico = request.form['servico'].upper().strip()
             servico.Pr_Servico = request.form['valor'].strip()
             servico.Tp_Estimado = request.form['tempo']
+            servico.Dc_Descricao1 = request.form['descricao1']
+            servico.Dc_Descricao2 = request.form['descricao2']
+            servico.Dc_Descricao3 = request.form['descricao3']
+            servico.Dc_Descricao4 = request.form['descricao4']
             db.session.commit()
             return redirect("/admin")
         

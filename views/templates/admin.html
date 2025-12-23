@@ -178,6 +178,10 @@
                                 <th>Serviço</th>
                                 <th>Valor</th>
                                 <th>Tempo estimado</th>
+                                <th>Descrição 1</th>
+                                <th>Descrição 2</th>
+                                <th>Descrição 3</th>
+                                <th>Descrição 4</th>
                                 <th>Editar</th>
                             </tr>
                         </thead>
@@ -187,6 +191,10 @@
                                 <td>{{ dados.No_Servico }}</td>
                                 <td>{{ dados.Pr_Servico }}</td>
                                 <td>{{ dados.Tp_Estimado }}</td>
+                                <td>{{ dados.Dc_Descricao1 }}</td>
+                                <td>{{ dados.Dc_Descricao2 }}</td>
+                                <td>{{ dados.Dc_Descricao3 }}</td>
+                                <td>{{ dados.Dc_Descricao4 }}</td>
                                 <td>
                                     <form  action="/crudServico/{{ dados.Id_Servico }}" method="post">
                                         <button type="submit" class="fa-solid fa-pen-to-square btn"></button>
@@ -282,6 +290,14 @@
                             <input type="number" name="valor" required>
                             <label for="">Tempo estimado:</label>
                             <input type="text" name="tempo" required>
+                            <label for="">Descrição 1:</label>
+                            <input type="text" name="descricao1">
+                            <label for="">Descrição 2:</label>
+                            <input type="text" name="descricao2">
+                            <label for="">Descrição 3:</label>
+                            <input type="text" name="descricao3">
+                            <label for="">Descrição 4:</label>
+                            <input type="text" name="descricao4">
                             <div class="botoes">
                                 <button class="botao"><i class="fa-solid fa-address-card"></i> Cadastrar</button>
                             </div>
