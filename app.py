@@ -19,7 +19,7 @@ app.add_url_rule('/login','login', UserController.login, methods=['POST','GET'])
 app.add_url_rule('/cadastro', 'cadastro', UserController.cadastro, methods=['POST','GET'])
 app.add_url_rule('/cliente', 'cliente', UserController.cliete, methods=['POST', 'GET'])
 app.add_url_rule('/admin', 'admin', UserController.admin, methods=['POST', 'GET'])
-app.add_url_rule('/agendar', 'agendar', UserController.agendar, methods=['POST', 'GET'])
+app.add_url_rule("/agendar/<int:Id_CardServico>", "agendar", UserController.agendar, methods=['POST', 'GET'])
 
 
 # ROTAS DO CRUD PROFISSIONAL

@@ -5,8 +5,9 @@ from models.user import User, Cliente, Profissional, Servico, Agendamento, db
 class UserController:
     @staticmethod
     def index():
-        users = User.query.all()
-        return render_template('index.html', users=users)
+        cardServico = Servico.query.all()
+        if cardServico:
+            return render_template('index.html', cardServico=cardServico)
 
     @staticmethod
     def login():
@@ -44,9 +45,12 @@ class UserController:
         return render_template('admin.html',DadosProf=DadosProf, DadosServico=DadosServico)
 
     @staticmethod
-    def agendar():
+    def agendar(Id_CardServico):
+        
         ContEtapa = 1
-        return render_template('agendar.html',ContEtapa=ContEtapa)
+        agendamento = Agendamento.query.get_or_404(Id_CardServico)
+        if agendamento:
+            return render_template('agendar.html',ContEtapa=ContEtapa, agendamento=agendamento)
 
     ####################################################INICO CRUD DO PROFISSIONAL#################################################################
     # ROTA CADASTRO DE PROFISSIONAL

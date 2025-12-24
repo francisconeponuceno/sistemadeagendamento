@@ -440,15 +440,15 @@ tr>td {
     border-radius: 12px;
     padding: 20px;
     max-width: 400px;
-    height: 450px;
-    margin: 10% auto;
+    height: 500px;
+    margin: 5% auto;
     position: relative;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     animation: aparecer 0.3s ease;
 }
 
 .modal-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--cor2);
 }
 
@@ -459,11 +459,16 @@ tr>td {
 
 .modal-content form input,
 option {
-    margin-bottom: 15px;
-    padding: 5px;
+    margin-bottom: 10px;
+    padding: 3px;
+    font-size: 0.8rem;
     outline: none;
     border-radius: 5px;
     border: 1px solid var(--cor3);
+}
+
+.modal-content form label {
+    font-size: 0.8rem;
 }
 
 .modal-content form .form-botao {
