@@ -22,27 +22,13 @@
         <!--Section Minhas Reservas-->
         <div class="minhas-reservas">
             <div class="title">
-                <form action="">
+                <form action="/" method="get">
                     <button type="submit" class="botao" id="voltar">voltar</button>
                 </form>
                 <h1>Etapas <span>{{ContEtapa}} de 5</span></h1>
-                <div class="etapa">
-                    <div class="etapa-filho etapa1">
-                    </div>
-                </div>
+                
             </div>
-            <div class="card-servico">
-                <div class="servico">
-                    <div class="descricao">
-                        <h2>Escolha o Profissional</h2>
-                    </div>
-                </div>
-                <div class="confirmacao">
-                    <div class="confirmado">
-                        
-                    </div>
-                </div>
-            </div>
+
             <div class="card-servico">
                 <div class="servico">
                     <div class="icone">
@@ -50,7 +36,7 @@
                     </div>
                     <div class="descricao">
                         <h2>{{ AgendaServico.No_Servico }}</h2>
-                        <span>Com: </span>
+                        <span>Com: {{ No_Profissional}}</span>
                         <div class="data-hora">
                             <i class="fa-solid fa-calendar"></i>
                             <span> </span>
@@ -67,31 +53,42 @@
                     </div>
                 </div>
             </div>
+
             <div class="card-servico">
                 <div class="servico">
-                    <div class="icone">
-                        <i class="fa-solid fa-scissors"></i>
-                    </div>
                     <div class="descricao">
-                        <h2>Barba & Bigode</h2>
-                        <span>Com Frederico</span>
-                        <div class="data-hora">
-                            <i class="fa-solid fa-calendar"></i>
-                            <span>15/10/2025</span>
-                        </div>
-                        <div class="data-hora">
-                            <i class="fa-solid fa-clock"></i>
-                            <span>21:00</span>
+                        <h2>Escolha o Profissional</h2>
+                    </div>
+                    <div class="etapa">
+                        <div class="etapa-filho etapa2">
                         </div>
                     </div>
                 </div>
-                <div class="confirmacao">
-                    <div class="confirmado">
-                        <span>R$ 45,00</span>
-                    </div>
-                    
-                </div>
+                
             </div>
+
+            {% for prof in profissionais %}
+                
+                <div class="card-servico">
+                    <div class="servico">
+                        <div class="icone">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <div class="descricao">
+                            <h2>{{ prof.No_Profissional }}</h2>
+                            <span>{{ prof.No_Especialidade }}</span>
+                        </div>
+                    </div>
+                    <div class="confirmacao">
+                        <div class="confirmado">
+                            <form action="/agendaretapa3/{{ prof.No_Profissional }}">
+                                <button type="submit" class="botao" id="btn_escolher">Escolher</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+            {% endfor %}
 
         </div>
 

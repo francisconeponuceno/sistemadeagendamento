@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/agendar.css">
+    <title>Agendamento</title>
+</head>
+
+<body>
+    
+
+    <section class="agendar">
+        
+        <!--Section Minhas Reservas-->
+        <div class="minhas-reservas">
+            <div class="title">
+                <form action="/" method="get">
+                    <button type="submit" class="botao" id="voltar">voltar</button>
+                </form>
+                <h1>Etapas <span>3 de 5</span></h1>
+                
+            </div>
+
+            <div class="card-servico">
+                <div class="servico">
+                    <div class="icone">
+                        <i class="fa-solid fa-scissors"></i>
+                    </div>
+                    <div class="descricao">
+                        <h2>{{ AgendaServico.No_Servico }}</h2>
+                        <span>Com: {{ No_Profissional }}</span>
+                        <div class="data-hora">
+                            <i class="fa-solid fa-calendar"></i>
+                            <span> </span>
+                        </div>
+                        <div class="data-hora">
+                            <i class="fa-solid fa-clock"></i>
+                            <span> </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="confirmacao">
+                    <div class="confirmado">
+                        <span>R$ {{ ValorCervico }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-servico">
+                <div class="servico">
+                    <div class="descricao">
+                        <h2>Escolha a Data</h2>
+                    </div>
+                    <div class="etapa">
+                        <div class="etapa-filho etapa3">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            {% for prof in profissionais %}
+                
+                <div class="card-servico">
+                    <div class="servico">
+                        <div class="icone">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <div class="descricao">
+                            <h2>{{ prof.No_Profissional }}</h2>
+                            <span>{{ prof.No_Especialidade }}</span>
+                        </div>
+                    </div>
+                    <div class="confirmacao">
+                        <div class="confirmado">
+                            <form action="/agendaretapa3/{{ prof.No_Profissional }}">
+                                <button type="submit" class="botao" id="btn_escolher">Escolher</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+            {% endfor %}
+
+        </div>
+
+
+    </section>
+    <script src="/static/js/agendar.js"></script>
+</body>
+
+</html>

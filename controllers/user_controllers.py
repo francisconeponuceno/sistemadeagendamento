@@ -45,14 +45,24 @@ class UserController:
         return render_template('admin.html',DadosProf=DadosProf, DadosServico=DadosServico)
 
     @staticmethod
-    def agendar(Id_Servico):
+    def agendaretapa2(Id_Servico):
         if request.method == 'POST':
-            ContEtapa = 1
+            ContEtapa = 2
+            profissionais = Profissional.query.all()
             AgendaServico = Servico.query.get_or_404(Id_Servico)
             ValorCervico = AgendaServico.Pr_Servico
             ValorCervico = f'{ValorCervico:.2f}'.replace('.',',')
             if AgendaServico:
-                return render_template('agendar.html',ContEtapa=ContEtapa, AgendaServico=AgendaServico, ValorCervico=ValorCervico )
+                return render_template('agendaretapa2.html',
+                                        ContEtapa=ContEtapa,
+                                        AgendaServico=AgendaServico,
+                                        ValorCervico=ValorCervico,
+                                         profissionais=profissionais)
+            
+    def agendaretapa3(No_Profissional):
+        
+        return redirect('/agendaretapa2.html', No_Profissional=No_Profissional)
+        
 
     ####################################################INICO CRUD DO PROFISSIONAL#################################################################
     # ROTA CADASTRO DE PROFISSIONAL

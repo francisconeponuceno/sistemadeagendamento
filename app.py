@@ -19,8 +19,8 @@ app.add_url_rule('/login','login', UserController.login, methods=['POST','GET'])
 app.add_url_rule('/cadastro', 'cadastro', UserController.cadastro, methods=['POST','GET'])
 app.add_url_rule('/cliente', 'cliente', UserController.cliete, methods=['POST', 'GET'])
 app.add_url_rule('/admin', 'admin', UserController.admin, methods=['POST', 'GET'])
-app.add_url_rule("/agendar/<int:Id_Servico>", "agendar", UserController.agendar, methods=['POST', 'GET'])
-
+app.add_url_rule("/agendaretapa2/<int:Id_Servico>", "agendaretapa2", UserController.agendaretapa2, methods=['POST', 'GET'])
+app.add_url_rule('/agendaretapa3/<string:No_Profissional>', 'agendaretapa3', UserController.agendaretapa3, methods=['POST', 'GET'])
 
 # ROTAS DO CRUD PROFISSIONAL
 app.add_url_rule('/CadProfissional', 'CadProfissional', UserController.CadProfissional, methods=['POST','GET'])
