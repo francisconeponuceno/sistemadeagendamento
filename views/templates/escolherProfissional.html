@@ -25,7 +25,7 @@
                 <form action="/" method="get">
                     <button type="submit" class="botao" id="voltar">voltar</button>
                 </form>
-                <h1>Etapas <span>{{ContEtapa}} de 5</span></h1>
+                <h1>Etapas <span>2 de 5</span></h1>
                 
             </div>
 
@@ -35,7 +35,7 @@
                         <i class="fa-solid fa-scissors"></i>
                     </div>
                     <div class="descricao">
-                        <h2>{{ AgendaServico.No_Servico }}</h2>
+                        <h2>{{ servico.No_Servico }}</h2>
                         <span>Com: {{ No_Profissional}}</span>
                         <div class="data-hora">
                             <i class="fa-solid fa-calendar"></i>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="confirmacao">
                     <div class="confirmado">
-                        <span>R$ {{ ValorCervico }}</span>
+                        <span>R$ {{ ValorServico }}</span>
                     </div>
                 </div>
             </div>

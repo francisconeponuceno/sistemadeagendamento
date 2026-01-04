@@ -30,41 +30,40 @@ class UserController:
         return render_template('login.html')
 
     @staticmethod
-    def cadastro():
-        return render_template('cadastro.html')
-
-    @staticmethod
     def cliete():
         return render_template('cliente.html')
 
-    # ROTA DO ADMINISTRADOR
+    ###################################### ROTAS DO AGENDAMENTO########################################
+
+    # ROTA ESCOLHA DO PROFISSIONAL
+    @staticmethod
+    def escolherProfissional(Id_Servico):
+        if request.method == 'POST':
+
+            servico = Servico.query.get_or_404(Id_Servico)
+            ValorServico = servico.Pr_Servico
+            ValorServico = f'{ValorServico:.2f}'.replace('.',',')
+            profissionais = Profissional.query.where(Profissional.No_Especialidade.like(f'%{servico.No_Servico}%'))
+            if servico:
+                return render_template('escolherProfissional.html',
+                                        servico=servico,
+                                        ValorServico=ValorServico,
+                                         profissionais=profissionais)
+
+    def agendaretapa3(No_Profissional):
+
+        return redirect('/agendaretapa2.html', No_Profissional=No_Profissional)
+
+    ################################################ ROATAS DO ADMINISTRADOR ################################################
+
+    # ROTA DASHBOARD
     @staticmethod
     def admin():
         DadosProf = Profissional.query.all()
         DadosServico = Servico.query.all()
-        return render_template('admin.html',DadosProf=DadosProf, DadosServico=DadosServico)
+        return render_template("admin.html", DadosProf=DadosProf, DadosServico=DadosServico)
 
-    @staticmethod
-    def agendaretapa2(Id_Servico):
-        if request.method == 'POST':
-            ContEtapa = 2
-            profissionais = Profissional.query.all()
-            AgendaServico = Servico.query.get_or_404(Id_Servico)
-            ValorCervico = AgendaServico.Pr_Servico
-            ValorCervico = f'{ValorCervico:.2f}'.replace('.',',')
-            if AgendaServico:
-                return render_template('agendaretapa2.html',
-                                        ContEtapa=ContEtapa,
-                                        AgendaServico=AgendaServico,
-                                        ValorCervico=ValorCervico,
-                                         profissionais=profissionais)
-            
-    def agendaretapa3(No_Profissional):
-        
-        return redirect('/agendaretapa2.html', No_Profissional=No_Profissional)
-        
-
-    ####################################################INICO CRUD DO PROFISSIONAL#################################################################
+    # -------------------------------------CRUD PROFISSIONAL------------------------------------------------------
     # ROTA CADASTRO DE PROFISSIONAL
     @staticmethod
     def CadProfissional():
@@ -78,7 +77,7 @@ class UserController:
             db.session.commit()
             return redirect("admin")
 
-    # ROTA UPDATE / DELETE
+    # ROTA UPDATE / DELETE  (PROFISSIONAL)
     @staticmethod
     def crudProfissional(Id_Profissional):
         if request.method == 'POST':
@@ -105,10 +104,7 @@ class UserController:
         db.session.commit()
         return redirect("/admin")
 
-    ####################################################FIM  CRUD DO PROFISSIONAL#################################################################
-
-
-    #####################################################INICO CRUD DO SERVIÇO#########################################################################
+    # --------------------------------------CRUD SERVIÇO-------------------------------------------------
     # ROTA CADASTRO DE SEVIÇO
     @staticmethod
     def CadServico():
@@ -133,14 +129,12 @@ class UserController:
             db.session.commit()
             return redirect("/admin")
 
-
-    # ROTA UPDATE / DELETE
+    # ROTA UPDATE / DELETE  (SERVIÇO)
     @staticmethod
     def crudServico(Id_Servico):
         if request.method == 'POST':
             servico = Servico.query.get_or_404(Id_Servico)
             return render_template('crudServico.html', servico=servico)
-        
 
     # ROTA UPDATE SERVICO
     @staticmethod
@@ -156,7 +150,8 @@ class UserController:
             servico.Dc_Descricao4 = request.form['descricao4']
             db.session.commit()
             return redirect("/admin")
-        
+
+    # ROTA DELETE SERVIÇO
     @staticmethod
     def DeleteServico(Id_Servico):
         if request.method == 'POST':
@@ -164,7 +159,3 @@ class UserController:
             db.session.delete(servico)
             db.session.commit()
             return redirect("/admin")
-
-        
-
-
