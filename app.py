@@ -16,10 +16,9 @@ migrate.init_app(app, db)
 # REGISTRANDO AS ROTAS
 app.add_url_rule('/', 'index', UserController.index)
 app.add_url_rule('/login','login', UserController.login, methods=['POST','GET'])
-app.add_url_rule('/cadastro', 'cadastro', UserController.cadastro, methods=['POST','GET'])
 app.add_url_rule('/cliente', 'cliente', UserController.cliete, methods=['POST', 'GET'])
 app.add_url_rule('/admin', 'admin', UserController.admin, methods=['POST', 'GET'])
-app.add_url_rule("/agendaretapa2/<int:Id_Servico>", "agendaretapa2", UserController.agendaretapa2, methods=['POST', 'GET'])
+app.add_url_rule("/escolherProfissional/<int:Id_Servico>","escolherProfissional",UserController.escolherProfissional,methods=["POST", "GET"],)
 app.add_url_rule('/agendaretapa3/<string:No_Profissional>', 'agendaretapa3', UserController.agendaretapa3, methods=['POST', 'GET'])
 
 # ROTAS DO CRUD PROFISSIONAL
