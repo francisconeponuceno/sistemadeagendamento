@@ -338,6 +338,10 @@ span {
 
 /* INICIO DO ESTILO PERFIL */
 
+.minhas-reservas .card-servico {
+    margin-right: 10px;
+}
+
 .minhas-reservas .card-servico .perfil {
     width: 100%;
 }
