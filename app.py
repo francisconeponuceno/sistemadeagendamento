@@ -9,9 +9,11 @@ from models.user import db, migrate
 app = Flask(__name__, template_folder=os.path.join('views', 'templates' ))
 app.config.from_object(Config)
 
+
 # INICIALIZANDO O BANCO DE DADOS
 db.init_app(app)
 migrate.init_app(app, db)
+
 
 # REGISTRANDO AS ROTAS
 app.add_url_rule('/', 'index', UserController.index)
@@ -20,6 +22,7 @@ app.add_url_rule('/cliente', 'cliente', UserController.cliete, methods=['POST', 
 app.add_url_rule('/admin', 'admin', UserController.admin, methods=['POST', 'GET'])
 app.add_url_rule("/escolherProfissional/<int:Id_Servico>","escolherProfissional",UserController.escolherProfissional,methods=["POST", "GET"],)
 app.add_url_rule('/agendaretapa3/<string:No_Profissional>', 'agendaretapa3', UserController.agendaretapa3, methods=['POST', 'GET'])
+
 
 # ROTAS DO CRUD PROFISSIONAL
 app.add_url_rule('/CadProfissional', 'CadProfissional', UserController.CadProfissional, methods=['POST','GET'])
@@ -33,6 +36,7 @@ app.add_url_rule('/CadServico', 'CadServico', UserController.CadServico, methods
 app.add_url_rule('/crudServico/<int:Id_Servico>', 'crudServico', UserController.crudServico, methods=['POST', 'GET'])
 app.add_url_rule('/updateServico/<int:Id_Servico>', 'updateServico', UserController.updateServico, methods=['POST', 'GET'])
 app.add_url_rule('/DeleteServico/<int:Id_Servico>', 'DeleteServico', UserController.DeleteServico, methods=['POST', 'GET'])
+
 
 if __name__ == '__main__':
     app.run(debug=True)

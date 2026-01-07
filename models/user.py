@@ -129,3 +129,29 @@ class Agendamento(db.Model):
     Dt_Delete = db.Column(db.Date, default=date.today)
     Hr_Delete = db.Column(db.DateTime, default=datetime.now)
     Fl_Delete = db.Column(db.String(1), default="N")
+
+
+# TABELA DADOS ESTABELECIMENTO
+#-----------------------------
+
+class Estabelecimento(db.Model):
+    __tablename__ = 'estabelecimento'
+
+    Id_endereco = db.Column(db.Integer, primary_key=True)
+    No_Estabelecimento = db.Column(db.String(50))
+    Nr_telefone = db.Column(db.String(11))
+    No_Rua = db.Column(db.String(50))
+    Nr_Numero = db.Column(db.String(40))
+    No_Bairro = db.Column(db.String(40))
+    No_Cidade = db.Column(db.String(50))
+    Uf_Estado = db.Column(db.String(20))
+    No_Email = db.Column(db.String(50))
+    No_HorarioSegSex = db.Column(db.String(40))
+    No_HorarioSab = db.Column(db.String(40))
+    No_HorarioDom = db.Column(db.String(40))
+    No_Instagran = db.Column(db.String(80))
+    No_Twiter = db.Column(db.String(80))
+    No_Linkedin = db.Column(db.String(80))
+    No_Facebook = db.Column(db.String(80))
+    
+
