@@ -131,7 +131,7 @@ class Agendamento(db.Model):
     Fl_Delete = db.Column(db.String(1), default="N")
 
 
-# TABELA DADOS ESTABELECIMENTO
+# TABELA ESTABELECIMENTO
 #-----------------------------
 
 class Estabelecimento(db.Model):

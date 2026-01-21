@@ -33,7 +33,7 @@ class UserController:
     def cliete():
         return render_template('cliente.html')
 
-    ###################################### ROTAS DO AGENDAMENTO########################################
+    ###################################### ROTAS DO AGENDAMENTO ########################################
 
     # ROTA ESCOLHA DO PROFISSIONAL
     @staticmethod
@@ -54,7 +54,7 @@ class UserController:
 
         return redirect('/agendaretapa2.html', No_Profissional=No_Profissional)
 
-    ################################################ ROATAS DO ADMINISTRADOR ################################################
+    ################################################ ROTAS DO ADMINISTRADOR ################################################
 
     # ROTA DASHBOARD
     @staticmethod
@@ -63,7 +63,7 @@ class UserController:
         DadosServico = Servico.query.all()
         return render_template("admin.html", DadosProf=DadosProf, DadosServico=DadosServico)
 
-    # -------------------------------------CRUD PROFISSIONAL------------------------------------------------------
+    # ------------------------------------- CRUD DO PROFISSIONAL ------------------------------------------------------
     # ROTA CADASTRO DE PROFISSIONAL
     @staticmethod
     def CadProfissional():

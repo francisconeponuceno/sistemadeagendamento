@@ -171,7 +171,8 @@ body {
 }
 
 .agendar .minhas-reservas .card-servico .servico .descricao span {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    color: var(--cor2);
 }
 
 .agendar .minhas-reservas .card-servico .servico .descricao {
